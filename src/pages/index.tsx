@@ -22,7 +22,7 @@ export default function Home(): ReactNode {
             title={`${siteConfig.title}`}
             description="Description will go into a meta tag in <head />">
             {/* Navigation - Fixed/Sticky with Glassmorphism */}
-            <LandingNavbar/>
+            {/*<LandingNavbar/>*/}
 
             <main>
                 {/* High Impact Hero with Download Buttons */}
