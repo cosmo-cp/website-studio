@@ -137,6 +137,22 @@ const config: Config = {
             darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,
+
+    plugins: [
+        async function myPlugin(context, options) {
+            return {
+                name: "docusaurus-tailwindcss",
+                configurePostCss(postcssOptions) {
+                    postcssOptions.plugins = [
+                        require("postcss-import"),
+                        require("@tailwindcss/postcss"),
+                        require("autoprefixer"),
+                    ];
+                    return postcssOptions;
+                },
+            }
+        },
+    ]
 };
 
 export default config;
