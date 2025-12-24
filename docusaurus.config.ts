@@ -15,15 +15,15 @@ const config: Config = {
     },
 
     // Set the production url of your site here
-    url: 'https://your-docusaurus-site.example.com',
+    url: 'http://cosmocp.com',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
 
     // GitHub pages deployment config.
     // If you aren't using GitHub pages, you don't need these.
-    organizationName: 'facebook', // Usually your GitHub org/user name.
-    projectName: 'docusaurus', // Usually your repo name.
+    organizationName: 'Cosmo-CP', // Usually your GitHub org/user name.
+    projectName: 'cosmo-studio', // Usually your repo name.
 
     onBrokenLinks: 'throw',
 
@@ -69,7 +69,7 @@ const config: Config = {
         navbar: {
             title: 'Cosmo Studio',
             logo: {
-                alt: 'My Site Logo',
+                alt: 'Cosmo Studio',
                 src: 'img/logo.svg',
             },
             items: [
@@ -77,11 +77,11 @@ const config: Config = {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
                     position: 'left',
-                    label: 'Tutorial',
+                    label: 'Docs',
                 },
                 {to: '/blog', label: 'Blog', position: 'left'},
                 {
-                    href: 'https://github.com/facebook/docusaurus',
+                    href: 'https://github.com/cosmo-cp/website-studio',
                     label: 'GitHub',
                     position: 'right',
                 },
@@ -94,7 +94,7 @@ const config: Config = {
                     title: 'Docs',
                     items: [
                         {
-                            label: 'Tutorial',
+                            label: 'Docs',
                             to: '/docs/intro',
                         },
                     ],
@@ -125,15 +125,14 @@ const config: Config = {
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/facebook/docusaurus',
+                            href: 'https://github.com/cosmo-cp/website-studio',
                         },
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
         },
         prism: {
-            theme: prismThemes.github,
+            theme: prismThemes.okaidia,
             darkTheme: prismThemes.dracula,
         },
     } satisfies Preset.ThemeConfig,

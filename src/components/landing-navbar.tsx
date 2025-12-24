@@ -53,8 +53,9 @@ export function LandingNavbar() {
                 href="https://github.com/Cosmo-mcp/cosmocp-desktop/releases"
                 target="_blank"
                 rel="nofollow noopener noreferrer"
+                className="text-background"
               >
-                <Download className="h-4 w-4" />
+                <Download className="h-4 w-4 text-background" />
                 Get Cosmo Studio
               </a>
             </Button>
