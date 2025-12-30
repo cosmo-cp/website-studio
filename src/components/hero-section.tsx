@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from './ui/button';
-import { motion, useInView } from 'framer-motion';
+import {color, motion, useInView} from 'framer-motion';
 import { Apple, Monitor, Terminal, Send, MessageSquare, Plus, ChevronDown } from 'lucide-react';
 
 const CONCEPTS = [
@@ -62,7 +62,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section className="relative pt-32 pb-20 md:pt-34 md:pb-32 overflow-hidden">
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.15] dark:opacity-20 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       </div>
@@ -115,6 +115,7 @@ export function HeroSection() {
               >
                 <a
                   href={DOWNLOAD_OPTIONS[os].href}
+                  className="!text-primary-foreground"
                   target="_blank"
                   rel="nofollow noopener noreferrer"
                 >

@@ -1,10 +1,10 @@
 
 export const SUPPORTED_PROVIDERS = [
-  { id: 'openai', name: 'OpenAI', logo: '/openai.webp', needsBg: true },
-  { id: 'anthropic', name: 'Anthropic', logo: '/anthropic.webp', needsBg: true },
-  { id: 'gemini', name: 'Gemini', logo: '/gemini.svg', needsBg: false },
-  { id: 'ollama', name: 'Ollama', logo: '/ollama.webp', needsBg: true },
-  { id: 'custom', name: 'Custom', logo: '/custom.webp', needsBg: true },
+  { id: 'openai', name: 'OpenAI', logo: '/img/openai.webp', needsBg: true },
+  { id: 'anthropic', name: 'Anthropic', logo: '/img/anthropic.webp', needsBg: true },
+  { id: 'gemini', name: 'Gemini', logo: '/img/gemini.svg', needsBg: false },
+  { id: 'ollama', name: 'Ollama', logo: '/img/ollama.webp', needsBg: true },
+  { id: 'custom', name: 'Custom', logo: '/img/custom.webp', needsBg: true },
 ]
 
 export const FEATURES_LIVE = [

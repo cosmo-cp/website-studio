@@ -1,7 +1,6 @@
 import type {ReactNode} from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import {LandingNavbar} from "@site/src/components/landing-navbar";
 import {HeroSection} from "@site/src/components/hero-section";
 import {LogoCarousel} from "@site/src/components/logo-carousel";
 import {StatsSection} from "@site/src/components/stats-section";
@@ -12,8 +11,6 @@ import {TestimonialsSection} from "@site/src/components/testimonials-section";
 import {BlogSection} from "@site/src/components/blog-section";
 import {FaqSection} from "@site/src/components/faq-section";
 import {CTASection} from "@site/src/components/cta-section";
-import {ContactSection} from "@site/src/components/contact-section";
-import {LandingFooter} from "@site/src/components/landing-footer";
 
 export default function Home(): ReactNode {
     const {siteConfig} = useDocusaurusContext();

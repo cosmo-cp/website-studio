@@ -75,6 +75,7 @@ const config: Config = {
                 src: 'img/logo.svg',
             },
             items: [
+                {to: '/', label: 'Home', position: 'right'},
                 {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
