@@ -59,11 +59,11 @@ export default function Home(): ReactNode {
                 <CTASection/>
 
                 {/* Links and socials */}
-                <ContactSection/>
+                {/*<ContactSection/>*/}
             </main>
 
             {/* Standard Footer */}
-            <LandingFooter/>
+            {/*<LandingFooter/>*/}
         </Layout>
     );
 }
