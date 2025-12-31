@@ -88,7 +88,7 @@ const config: Config = {
                 },
                 {to: '/blog', label: 'Blog', position: 'right'},
                 {
-                    href: 'https://github.com/cosmo-cp/website-studio',
+                    href: 'https://github.com/cosmo-cp/cosmo-studio',
                     className: 'header-github-link',
                     position: 'right',
                 },
@@ -124,7 +124,7 @@ const config: Config = {
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/cosmo-cp/website-studio',
+                            href: 'https://github.com/cosmo-cp/cosmo-studio',
                         },
                     ],
                 },
