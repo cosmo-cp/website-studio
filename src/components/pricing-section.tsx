@@ -59,7 +59,7 @@ export function PricingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="text-xl text-muted-foreground mx-auto leading-relaxed"
           >
             We're building the ultimate AI command center. Join us in active beta and get full access to every feature, completely free.
           </motion.p>

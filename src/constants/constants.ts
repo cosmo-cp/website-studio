@@ -36,23 +36,23 @@ export const FEATURES_LIVE = [
 
 export const FEATURES_ROADMAP = [
   {
-    title: 'Voice Mode',
-    description: 'Real-time voice conversations with your AI models.',
+    title: 'Chat',
+    description: 'Real-time conversations with your AI models.',
     status: 'beta',
   },
   {
-    title: 'Plugin System',
-    description: 'Extend functionality with community-built plugins.',
+    title: 'Model Context Protocol(MCP)',
+    description: 'Expand model functionality through shared, plug-and-play tools.',
     status: 'coming',
   },
   {
-    title: 'Team Collaboration',
-    description: 'Share chats and prompts with your team.',
+    title: 'Agent',
+    description: 'Automate tasks with intelligent, goal-driven agents.',
     status: 'coming',
   },
   {
-    title: 'Mobile App',
-    description: 'iOS and Android apps to chat on the go.',
+    title: 'Personas',
+    description: 'Customize behavior with purpose-built AI personas',
     status: 'coming',
   },
 ];

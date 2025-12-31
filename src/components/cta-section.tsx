@@ -11,7 +11,7 @@ export function CTASection() {
         <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
           Ready to upgrade your workflow?
         </h2>
-        <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-muted-foreground mb-10 mx-auto">
           Join thousands of developers who have switched to Cosmo Studio for a faster, more private AI experience.
         </p>
         
@@ -20,6 +20,7 @@ export function CTASection() {
             <a 
               href="https://github.com/Cosmo-mcp/cosmocp-desktop/releases"
               target="_blank"
+              className="!text-primary-foreground"
               rel="nofollow noopener noreferrer"
             >
               <Download className="h-5 w-5" />
