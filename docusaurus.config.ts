@@ -10,8 +10,12 @@ const config: Config = {
     favicon: 'img/favicon.ico',
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+    //https://softuts.com/css-not-loading-docusaurus-3-8/
     future: {
-        v4: true, // Improve compatibility with the upcoming Docusaurus v4
+        v4: {
+            useCssCascadeLayers: false,
+            removeLegacyPostBuildHeadAttribute: true,
+        },
     },
 
     // Set the production url of your site here
