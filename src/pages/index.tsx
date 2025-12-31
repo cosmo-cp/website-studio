@@ -44,10 +44,10 @@ export default function Home(): ReactNode {
                 <PricingSection/>
 
                 {/* Social proof/User tweets */}
-                <TestimonialsSection/>
+                {/*<TestimonialsSection/>*/}
 
                 {/* Latest updates */}
-                <BlogSection/>
+                {/*<BlogSection/>*/}
 
                 {/* Technical questions (API keys, privacy, etc.) */}
                 <FaqSection/>
