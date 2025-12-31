@@ -27,7 +27,7 @@ export function BlogSection() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-3xl font-bold">Latest Updates</h2>
-          <a href="#" className="text-primary hover:underline flex items-center gap-1">
+          <a href="/blog" className="text-primary hover:underline flex items-center gap-1">
             View all posts <ArrowRight className="h-4 w-4" />
           </a>
         </div>

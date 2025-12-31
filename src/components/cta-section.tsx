@@ -27,9 +27,6 @@ export function CTASection() {
               Download Cosmo Studio
             </a>
           </Button>
-          <p className="text-sm text-muted-foreground mt-4 sm:mt-0 sm:ml-4">
-            Available for macOS, Windows, and Linux
-          </p>
         </div>
       </div>
     </section>
