@@ -96,7 +96,8 @@ export function PricingSection() {
 
                   <div className="flex flex-col gap-4">
                     <Button size="lg" className="w-full md:w-auto text-lg h-14 px-8 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 rounded-xl transition-transform hover:scale-105 active:scale-95" asChild>
-                      <a href="https://github.com/Cosmo-mcp/cosmocp-desktop/releases" target="_blank" rel="nofollow noopener noreferrer">
+                      <a href="https://github.com/Cosmo-mcp/cosmocp-desktop/releases" target="_blank" rel="nofollow noopener noreferrer"
+                      className="!text-primary-foreground">
                         <Zap className="w-5 h-5 mr-2 fill-white dark:fill-black" />
                         Download Now
                       </a>
