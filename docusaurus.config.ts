@@ -31,6 +31,15 @@ const config: Config = {
 
     onBrokenLinks: 'throw',
 
+    customFields: {
+        version: '1.0.1',
+        downloadLinks: {
+            mac: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/Cosmo.Studio-darwin-arm64-1.0.1.zip',
+            windows: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/Cosmo.Studio-1.0.1.Setup.exe',
+            linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/cosmostudio_1.0.1_amd64.deb',
+        },
+    },
+
     // Even if you don't use internationalization, you can use this field to set
     // useful metadata like html lang. For example, if your site is Chinese, you
     // may want to replace "en" with "zh-Hans".
