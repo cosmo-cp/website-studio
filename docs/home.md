@@ -21,5 +21,6 @@ Cosmo Studio is a cross-platform desktop AI client for focused, privacy-consciou
 
 ## What’s next
 
+- Read **Getting started** for setup details.
 - Learn about core features in **Features**.
 - Review licensing details in **License**.
