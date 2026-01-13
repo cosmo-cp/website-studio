@@ -114,7 +114,7 @@ export function LandingNavbar() {
                     {/*<ThemeToggle />*/}
                   </div>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                    <span>v1.0.0</span>
+                    <span>v1.0.1</span>
                     <span className="h-1 w-1 rounded-full bg-muted-foreground/50" />
                     <span>macOS, Win, Linux</span>
                   </div>
