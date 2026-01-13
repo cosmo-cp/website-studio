@@ -25,7 +25,7 @@ const CONCEPTS = [
 ];
 
 export function HeroSection() {
-    const [os, setOs] = useState<'macOS' | 'Windows' | 'Linux'>('macOS');
+    const [os, setOs] = useState<'macOS' | 'Windows' | 'Linux'>('Windows');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [concept, setConcept] = useState(CONCEPTS[0]);
     const ref = useRef(null);
@@ -40,7 +40,7 @@ export function HeroSection() {
         } else if (userAgent.includes('linux')) {
             setOs('Linux');
         } else {
-            setOs('macOS');
+            setOs('Windows');
         }
     }, []);
 
@@ -48,11 +48,6 @@ export function HeroSection() {
     const intro = "Cosmo Studio v" + siteConfig.customFields.version as string + " has landed 🚀";
 
     const downloadOptions = {
-        macOS: {
-            label: 'Download for macOS',
-            icon: Apple,
-            href: siteConfig.customFields.downloadLinks["mac"],
-        },
         Windows: {
             label: 'Download for Windows',
             icon: Monitor,
@@ -124,7 +119,6 @@ export function HeroSection() {
                                     className="!text-primary-foreground"
                                     rel="nofollow noopener noreferrer"
                                 >
-                                    {os === 'macOS' && <Apple className="h-5 w-5"/>}
                                     {os === 'Windows' && <Monitor className="h-5 w-5"/>}
                                     {os === 'Linux' && <Terminal className="h-5 w-5"/>}
                                     Download for {os}
