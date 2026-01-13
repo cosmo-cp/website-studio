@@ -9,7 +9,7 @@ import {
 export function FaqSection() {
   return (
     <section id="faq" className="py-24 bg-muted/30">
-      <div className="container mx-auto px-4 max-w-3xl">
+      <div className="container mx-auto max-w-3xl">
         <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
         
         <Accordion type="single" collapsible className="w-full space-y-4">
