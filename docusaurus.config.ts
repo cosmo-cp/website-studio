@@ -69,8 +69,8 @@ const config: Config = {
         image: 'img/docusaurus-social-card.jpg',
         colorMode: {
             defaultMode: "light",
-            disableSwitch: true,
-            respectPrefersColorScheme: true,
+            disableSwitch: false,
+            respectPrefersColorScheme: false, // ignore system theme
         },
         navbar: {
             title: 'Cosmo Studio',
@@ -79,56 +79,65 @@ const config: Config = {
                 src: 'img/logo.svg',
             },
             items: [
-                {to: '/', label: 'Home', position: 'right'},
                 {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
-                    position: 'right',
+                    position: 'left',
                     label: 'Docs',
                 },
-                {to: '/blog', label: 'Blog', position: 'right'},
+                {to: '/blog', label: 'Blog', position: 'left'},
                 {
                     href: 'https://github.com/cosmo-cp/cosmo-studio',
                     className: 'header-github-link',
                     position: 'right',
+                }, 
+
+                {
+                    href: 'https://github.com/Cosmo-mcp/cosmocp-desktop/releases',
+                    html: '<span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Get Cosmo Studio</span>',
+                    position: 'right',
+                    className: 'button button--primary button--lg navbar-cta-button',
                 },
             ],
         },
         footer: {
-            style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: 'Product',
                     items: [
                         {
-                            label: 'Docs',
-                            to: '/docs/home',
+                            label: 'Features',
+                            to: '/#features',
+                        },
+                        {
+                            label: 'Download',
+                            href: 'https://github.com/Cosmo-mcp/cosmocp-desktop/releases',
+                        },
+                        {
+                            label: 'Changelog',
+                            to: '/blog',
                         },
                     ],
                 },
-                /*{
-                    title: 'Community',
-                    items: [
-                        /!*{
-                            label: 'X',
-                            href: 'https://x.com/docusaurus',
-                        },*!/
-                    ],
-                },*/
                 {
-                    title: 'More',
+                    title: 'Resources',
                     items: [
                         {
-                            label: 'Blog',
-                            to: '/blog',
+                            label: 'Documentation',
+                            to: '/docs/home',
                         },
                         {
                             label: 'GitHub',
                             href: 'https://github.com/cosmo-cp/cosmo-studio',
                         },
+                        {
+                            label: 'Blog',
+                            to: '/blog',
+                        },
                     ],
                 },
             ],
+            copyright: `Copyright © ${new Date().getFullYear()} Cosmo Studio Inc.`,
         },
         prism: {
             theme: prismThemes.okaidia,
