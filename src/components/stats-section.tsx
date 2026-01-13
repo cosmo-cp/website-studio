@@ -10,7 +10,7 @@ const stats = [
   },
   {
     label: 'AI Providers',
-    value: '5+',
+    value: '4+',
     icon: Layers,
     description: 'OpenAI, Anthropic, Gemini & more',
   },
