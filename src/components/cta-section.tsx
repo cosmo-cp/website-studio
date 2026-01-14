@@ -12,14 +12,13 @@ export function CTASection() {
           Ready to upgrade your workflow?
         </h2>
         <p className="text-xl text-muted-foreground mb-10 mx-auto">
-          Join thousands of developers who have switched to Cosmo Studio for a faster, more private AI experience.
+          Join Cosmo Studio for a faster, more private AI experience.
         </p>
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button size="lg" className="h-14 px-8 text-lg gap-2" asChild>
             <a 
-              href="https://github.com/Cosmo-mcp/cosmocp-desktop/releases"
-              target="_blank"
+              href="#"
               className="!text-primary-foreground"
               rel="nofollow noopener noreferrer"
             >

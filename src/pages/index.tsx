@@ -7,8 +7,6 @@ import {StatsSection} from "@site/src/components/stats-section";
 import {AboutSection} from "@site/src/components/about-section";
 import {FeaturesSection} from "@site/src/components/features-section";
 import {PricingSection} from "@site/src/components/pricing-section";
-import {TestimonialsSection} from "@site/src/components/testimonials-section";
-import {BlogSection} from "@site/src/components/blog-section";
 import {FaqSection} from "@site/src/components/faq-section";
 import {CTASection} from "@site/src/components/cta-section";
 
