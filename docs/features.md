@@ -26,7 +26,10 @@ Add, edit, and remove providers with simple configuration flows. Keep keys organ
 
 Run the same experience on Windows, macOS, and Linux with consistent behavior across all supported platforms.
 
+## Developer features
+
+- **Multimodal input:** Support for image-based prompts in developer workflows.
+
 ## Roadmap items
 
-- **Multimodal input:** Planned support for image-based prompts.
 - **Expanded integrations:** More model providers and productivity workflows.
