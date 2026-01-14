@@ -5,6 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@site/src/components/ui/accordion"
+import { motion } from 'framer-motion';
 
 export function FaqSection() {
   return (
