@@ -29,18 +29,8 @@ export function PricingSection() {
         </motion.div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-8 border border-primary/20"
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>Early Access Special</span>
-          </motion.div>
-          
+      <div className="container mx-auto relative z-10">
+        <div className="text-center">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +51,7 @@ export function PricingSection() {
             transition={{ delay: 0.2 }}
             className="text-xl text-muted-foreground mx-auto leading-relaxed"
           >
-            We're building the ultimate AI command center. Join us in active beta and get full access to every feature, completely free.
+            We're building the ultimate AI command center. Download and get full access to every feature, completely free.
           </motion.p>
         </div>
 
@@ -96,7 +86,7 @@ export function PricingSection() {
 
                   <div className="flex flex-col gap-4">
                     <Button size="lg" className="w-full md:w-auto text-lg h-14 px-8 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 rounded-xl transition-transform hover:scale-105 active:scale-95" asChild>
-                      <a href="https://github.com/Cosmo-mcp/cosmocp-desktop/releases" target="_blank" rel="nofollow noopener noreferrer"
+                      <a href="#" rel="nofollow noopener noreferrer"
                       className="!text-primary-foreground">
                         <Zap className="w-5 h-5 mr-2 fill-white dark:fill-black" />
                         Download Now
@@ -121,9 +111,8 @@ export function PricingSection() {
                         'Bring Your Own Key (OpenAI, Anthropic)',
                         'Unified Chat Interface',
                         'Markdown & Code Highlighting',
-                        'Chat History & Export',
-                        'Prompt Library',
-                        'Dark Mode First',
+                        'Chat History',
+                        'Dark Mode',
                         'Regular Updates'
                       ].map((feature, i) => (
                         <motion.li 

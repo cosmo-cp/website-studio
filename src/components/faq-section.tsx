@@ -1,5 +1,4 @@
 import { FAQS } from '@site/src/constants/constants';
-import { motion } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
