@@ -175,6 +175,12 @@ body {
     color: var(--foreground);
 }
 
+section {
+    background: var(--background);
+}
+
+/* Docusaurus styles from here */
+
 .navbar {
     box-shadow: none;
     background: transparent;
@@ -204,9 +210,14 @@ body {
 .navbar__item {
     padding: 0.5rem 0.75rem;
     font-size: 0.925rem;
-    font-weight: 500;
+    font-weight: 400;
     border-radius: var(--radius-md);
     transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar__item span {
+    font-weight: 400;
+    font-size: 12px;
 }
 
 .navbar__link:hover, .navbar__link--active {

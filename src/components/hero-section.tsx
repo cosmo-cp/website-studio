@@ -96,7 +96,7 @@ export function HeroSection() {
                         initial={{opacity: 0, y: 20}}
                         animate={{opacity: 1, y: 0}}
                         transition={{duration: 0.5, delay: 0.2}}
-                        className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl"
+                        className="text-lg md:text-xl text-muted-foreground !m-8 max-w-2xl"
                     >
                         Chat with GPT, Claude, and local Ollama models in one native app.
                         Bring your own keys. Own your data.
@@ -116,7 +116,7 @@ export function HeroSection() {
                             >
                                 <a
                                     href={downloadOptions[os].href}
-                                    className="!text-primary-foreground"
+                                    className="!text-primary-foreground !no-underline [color:inherit]"
                                     rel="nofollow noopener noreferrer"
                                 >
                                     {os === 'Windows' && <Monitor className="h-5 w-5"/>}
@@ -143,7 +143,7 @@ export function HeroSection() {
                                                 key={key}
                                                 href={option.href}
                                                 rel="nofollow noopener noreferrer"
-                                                className="flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors text-left"
+                                                className="!no-underline !text-inherit flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors text-left"
                                                 onClick={() => {
                                                     setIsDropdownOpen(false);
                                                 }}

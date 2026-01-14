@@ -7,7 +7,7 @@ import {motion} from 'framer-motion';
 export function LogoCarousel() {
     return (
         <section className="py-15 border-y border-white/5 bg-white/5 overflow-hidden">
-            <div className="container mx-auto px-4 mb-8 text-center">
+            <div className="container mx-auto px-4 !mb-8 text-center">
                 <p className="text-sm text-muted-foreground font-medium">Powering your workflow with top-tier models</p>
             </div>
 
@@ -35,7 +35,7 @@ export function LogoCarousel() {
                                 <img
                                     src={provider.logo}
                                     alt={provider.name}
-                                    className="object-contain"
+                                    className="object-contain w-40 h-40"
                                 />
                             </div>
 

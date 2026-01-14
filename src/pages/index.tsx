@@ -15,9 +15,7 @@ export default function Home(): ReactNode {
     return (
         <Layout
             title={`${siteConfig.title}`}
-            description="Description will go into a meta tag in <head />">
-            {/* Navigation - Fixed/Sticky with Glassmorphism */}
-            {/*<LandingNavbar/>*/}
+            description="Chat with GPT, Claude, and local Ollama models in one native app. Bring your own keys. Own your data.">
 
             <main>
                 {/* High Impact Hero with Download Buttons */}
@@ -35,30 +33,16 @@ export default function Home(): ReactNode {
                 {/* Grid layout distinguishing "Now Available" vs "Roadmap" */}
                 <FeaturesSection/>
 
-                {/* Maker/Dev team profiles */}
-                {/* <TeamSection /> */}
-
                 {/* Free vs Power User License */}
                 <PricingSection/>
-
-                {/* Social proof/User tweets */}
-                {/*<TestimonialsSection/>*/}
-
-                {/* Latest updates */}
-                {/*<BlogSection/>*/}
 
                 {/* Technical questions (API keys, privacy, etc.) */}
                 <FaqSection/>
 
                 {/* Final "Download Now" push */}
                 <CTASection/>
-
-                {/* Links and socials */}
-                {/*<ContactSection/>*/}
             </main>
 
-            {/* Standard Footer */}
-            {/*<LandingFooter/>*/}
         </Layout>
     );
 }
