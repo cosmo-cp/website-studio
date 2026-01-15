@@ -259,21 +259,39 @@ section {
 }
 
 .navbar-sidebar__items {
-    padding-top: 1rem;
+    height: calc(100vh - 60px) !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+}
+
+/* Ensure the sidebar takes full height */
+.navbar-sidebar {
+    height: 100vh !important;
+    max-height: 100vh !important;
+}
+
+/* Fix for items container within sidebar */
+.navbar-sidebar__items--show-secondary {
+    transform: translateX(-100%);
+}
+
+/* Ensure menu items are visible */
+.navbar-sidebar .menu {
+    padding: 0.5rem;
+}
+
+.navbar-sidebar .menu__list {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-sidebar .menu__list-item {
+    margin: 1rem 0;
 }
 
 .navbar-sidebar__item {
     padding: 0.25rem 1rem;
     font-weight: 500;
-}
-
-/* Fix for mobile menu links visibility */
-.navbar-sidebar .menu__link {
-    color: var(--foreground) !important;
-}
-
-.navbar-sidebar .menu__link:hover {
-    background-color: var(--muted);
 }
 
 /* CTA Button Styling */

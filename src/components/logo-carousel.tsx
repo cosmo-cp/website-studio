@@ -27,7 +27,7 @@ export function LogoCarousel() {
                             className="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer min-w-max"
                         >
                             <div className={cn(
-                                "relative h-10 w-11 rounded-md flex items-center justify-center",
+                                "relative rounded-md flex items-center justify-center",
                                 provider.needsBg
                                     ? "bg-foreground/10 dark:bg-foreground/20"
                                     : "bg-transparent"
@@ -35,7 +35,7 @@ export function LogoCarousel() {
                                 <img
                                     src={provider.logo}
                                     alt={provider.name}
-                                    className="object-contain w-40 h-40"
+                                    className="object-contain w-10 h-10"
                                 />
                             </div>
 
