@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-    --background: oklch(0.99 0 0 / 1);;
+    --background: oklch(0.99 0 0 / 1);
     --foreground: oklch(0.2284 0.0384 282.9324);
     --card: oklch(1.0000 0 0);
     --card-foreground: oklch(0.2284 0.0384 282.9324);
@@ -179,6 +179,12 @@ section {
     background: var(--background);
 }
 
+.landing-wrapper {
+    --ifm-font-family-base: var(--font-sans) !important;
+    --ifm-heading-font-family: var(--font-sans) !important;
+    font-family: var(--font-sans) !important;
+}
+
 /* Docusaurus styles from here */
 
 .navbar {
@@ -199,8 +205,8 @@ section {
 }
 
 .navbar__inner {
-   max-width: 1400px;
-   margin: 0 auto;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .navbar__brand {

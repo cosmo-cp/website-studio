@@ -48,6 +48,12 @@ export function HeroSection() {
     const intro = "Cosmo Studio v" + siteConfig.customFields.version as string + " has landed 🚀";
 
     const downloadOptions = {
+        macOS: {
+            label: 'Download for macOS',
+            icon: Apple,
+            href: siteConfig.customFields.downloadLinks["mac"],
+            disabled: true,
+        },
         Windows: {
             label: 'Download for Windows',
             icon: Monitor,
@@ -147,6 +153,7 @@ export function HeroSection() {
                                                 onClick={() => {
                                                     setIsDropdownOpen(false);
                                                 }}
+                                                aria-disabled={option?.disabled ?? false}
                                             >
                                                 <Icon className="h-4 w-4"/>
                                                 {option.label}
