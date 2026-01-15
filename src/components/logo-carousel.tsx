@@ -7,7 +7,7 @@ import {motion} from 'framer-motion';
 export function LogoCarousel() {
     return (
         <section className="py-15 border-y border-white/5 bg-white/5 overflow-hidden">
-            <div className="container mx-auto px-4 mb-8 text-center">
+            <div className="container mx-auto px-4 !mb-8 text-center">
                 <p className="text-sm text-muted-foreground font-medium">Powering your workflow with top-tier models</p>
             </div>
 
@@ -27,7 +27,7 @@ export function LogoCarousel() {
                             className="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer min-w-max"
                         >
                             <div className={cn(
-                                "relative h-10 w-11 rounded-md flex items-center justify-center",
+                                "relative rounded-md flex items-center justify-center",
                                 provider.needsBg
                                     ? "bg-foreground/10 dark:bg-foreground/20"
                                     : "bg-transparent"
@@ -35,7 +35,7 @@ export function LogoCarousel() {
                                 <img
                                     src={provider.logo}
                                     alt={provider.name}
-                                    className="object-contain"
+                                    className="object-contain w-10 h-10"
                                 />
                             </div>
 

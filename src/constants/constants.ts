@@ -57,26 +57,7 @@ export const FEATURES_ROADMAP = [
   },
 ];
 
-export const TESTIMONIALS = [
-  {
-    name: 'Sarah Chen',
-    handle: '@sarahchen_dev',
-    quote: 'Cosmo Studio has completely replaced my browser tabs for AI chat. The local model support is a game changer.',
-    avatar: '/images/avatars/sarah.jpg',
-  },
-  {
-    name: 'Alex Rivera',
-    handle: '@arivera',
-    quote: 'Finally, a native app that feels like it belongs on my Mac. Fast, beautiful, and private.',
-    avatar: '/images/avatars/alex.jpg',
-  },
-  {
-    name: 'Jordan Lee',
-    handle: '@jlee_tech',
-    quote: 'Being able to switch between GPT and Claude instantly helps me compare outputs for coding tasks.',
-    avatar: '/images/avatars/jordan.jpg',
-  },
-];
+
 
 export const FAQS = [
   {
@@ -97,17 +78,4 @@ export const FAQS = [
   },
 ];
 
-export const TEAM = [
-  {
-    name: 'David Kim',
-    role: 'Founder & Lead Developer',
-    social: { twitter: 'https://twitter.com/davidkim', github: 'https://github.com/davidkim' },
-    image: '/images/team/david.jpg',
-  },
-  {
-    name: 'Elena Rodriguez',
-    role: 'Product Designer',
-    social: { twitter: 'https://twitter.com/elena', dribbble: 'https://dribbble.com/elena' },
-    image: '/images/team/elena.jpg',
-  },
-];
+

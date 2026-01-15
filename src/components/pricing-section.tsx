@@ -36,7 +36,7 @@ export function PricingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold mb-8 tracking-tight"
+            className="!text-5xl md:!text-7xl font-bold !mb-8 tracking-tight"
           >
             Professional Power.<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-cyan-400 to-blue-400 animate-gradient-x">
@@ -49,7 +49,7 @@ export function PricingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-muted-foreground mx-auto leading-relaxed"
+            className="text-md text-muted-foreground mx-auto leading-relaxed"
           >
             We're building the ultimate AI command center. Download and get full access to every feature, completely free.
           </motion.p>
@@ -80,14 +80,14 @@ export function PricingSection() {
                   </div>
                   
                   <div className="flex items-baseline gap-2">
-                    <span className="text-8xl font-bold text-zinc-900 dark:text-white tracking-tighter">$0</span>
+                    <span className="text-8xl font-bold text-zinc-900 dark:text-white tracking-tighter">₹0</span>
                     <span className="text-2xl text-muted-foreground font-light">/ forever</span>
                   </div>
 
                   <div className="flex flex-col gap-4">
-                    <Button size="lg" className="w-full md:w-auto text-lg h-14 px-8 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 rounded-xl transition-transform hover:scale-105 active:scale-95" asChild>
+                    <Button size="lg" className="w-full md:w-auto text-lg h-14 px-8 bg-zinc-900 text-white hover:bg-zinc-800 dark:bg-white dark:text-black dark:hover:bg-zinc-200 rounded-xl transition-transform hover:scale-105 active:scale-90" asChild>
                       <a href="#" rel="nofollow noopener noreferrer"
-                      className="!text-primary-foreground">
+                      className="!no-underline">
                         <Zap className="w-5 h-5 mr-2 fill-white dark:fill-black" />
                         Download Now
                       </a>

@@ -1,9 +1,9 @@
 'use client';
 
-import React, {useEffect, useRef, useState} from 'react';
-import {Button} from './ui/button';
-import {motion, useInView} from 'framer-motion';
-import {Apple, ChevronDown, MessageSquare, Monitor, Plus, Send, Terminal} from 'lucide-react';
+import React, { useEffect, useRef, useState } from 'react';
+import { Button } from './ui/button';
+import { motion, useInView } from 'framer-motion';
+import { Apple, ChevronDown, MessageSquare, Monitor, Plus, Send, Terminal } from 'lucide-react';
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 const CONCEPTS = [
@@ -29,7 +29,7 @@ export function HeroSection() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [concept, setConcept] = useState(CONCEPTS[0]);
     const ref = useRef(null);
-    const isInView = useInView(ref, {once: true, amount: 0.5});
+    const isInView = useInView(ref, { once: true, amount: 0.5 });
 
     useEffect(() => {
         setConcept(CONCEPTS[Math.floor(Math.random() * CONCEPTS.length)]);
@@ -44,10 +44,16 @@ export function HeroSection() {
         }
     }, []);
 
-    const {siteConfig} = useDocusaurusContext();
+    const { siteConfig } = useDocusaurusContext();
     const intro = "Cosmo Studio v" + siteConfig.customFields.version as string + " has landed 🚀";
 
-    const downloadOptions = {
+    const downloadOptions: Record<string, { label: string; icon: React.ElementType; href: any; disabled?: boolean }> = {
+        macOS: {
+            label: 'Download for macOS',
+            icon: Apple,
+            href: siteConfig.customFields.downloadLinks["mac"],
+            disabled: true,
+        },
         Windows: {
             label: 'Download for Windows',
             icon: Monitor,
@@ -64,48 +70,48 @@ export function HeroSection() {
         <section className="relative pt-32 pb-20 md:pt-34 md:pb-32 overflow-hidden">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div
-                    className="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.15] dark:opacity-20 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"/>
+                    className="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] opacity-[0.15] dark:opacity-20 [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
             </div>
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
                     <motion.div
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.5}}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
                         className="relative inline-flex overflow-hidden rounded-full p-[1px] mb-8"
                     >
                         <span
-                            className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_0%,var(--primary)_50%,#00000000_100%)]"/>
+                            className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_0%,var(--primary)_50%,#00000000_100%)]" />
                         <span
                             className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-background px-3 py-1 text-sm font-medium text-primary backdrop-blur-3xl">
-              <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
+                            <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
                             {intro}</span>
                     </motion.div>
 
                     <motion.h1
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.5, delay: 0.1}}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.1 }}
+                        className="!text-4xl md:!text-6xl lg:!text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70"
                     >
-                        Your All-in-One <br/>
+                        Your All-in-One <br />
                         <span className="text-primary">AI Command Center</span>
                     </motion.h1>
 
                     <motion.p
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.5, delay: 0.2}}
-                        className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="text-lg md:text-xl text-muted-foreground !m-8 max-w-2xl"
                     >
                         Chat with GPT, Claude, and local Ollama models in one native app.
                         Bring your own keys. Own your data.
                     </motion.p>
 
                     <motion.div
-                        initial={{opacity: 0, y: 20}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 0.5, delay: 0.3}}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
                         className="flex flex-col items-center gap-4 mb-12 relative z-20"
                     >
                         <div className="relative flex items-center">
@@ -116,11 +122,11 @@ export function HeroSection() {
                             >
                                 <a
                                     href={downloadOptions[os].href}
-                                    className="!text-primary-foreground"
+                                    className="!text-primary-foreground !no-underline [color:inherit]"
                                     rel="nofollow noopener noreferrer"
                                 >
-                                    {os === 'Windows' && <Monitor className="h-5 w-5"/>}
-                                    {os === 'Linux' && <Terminal className="h-5 w-5"/>}
+                                    {os === 'Windows' && <Monitor className="h-5 w-5" />}
+                                    {os === 'Linux' && <Terminal className="h-5 w-5" />}
                                     Download for {os}
                                 </a>
                             </Button>
@@ -129,7 +135,7 @@ export function HeroSection() {
                                 className="h-12 px-3 rounded-l-none"
                                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                             >
-                                <ChevronDown className="h-4 w-4"/>
+                                <ChevronDown className="h-4 w-4" />
                             </Button>
 
                             {isDropdownOpen && (
@@ -143,12 +149,13 @@ export function HeroSection() {
                                                 key={key}
                                                 href={option.href}
                                                 rel="nofollow noopener noreferrer"
-                                                className="flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors text-left"
+                                                className="!no-underline !text-inherit flex w-full items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground transition-colors text-left"
                                                 onClick={() => {
                                                     setIsDropdownOpen(false);
                                                 }}
+                                                aria-disabled={option?.disabled ?? false}
                                             >
-                                                <Icon className="h-4 w-4"/>
+                                                <Icon className="h-4 w-4" />
                                                 {option.label}
                                             </a>
                                         );
@@ -159,15 +166,15 @@ export function HeroSection() {
                     </motion.div>
 
                     <motion.p
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        transition={{duration: 0.5, delay: 0.4}}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
                         className="text-sm text-muted-foreground/90"
                     >
-            <span
-                className="inline-block rounded-md bg-white/7 border border-white/10 px-3 py-1 backdrop-blur-sm text-muted-foreground">
-              We never see your messages. You bring the API keys.
-            </span>
+                        <span
+                            className="inline-block rounded-md bg-white/7 border border-white/10 px-3 py-1 backdrop-blur-sm text-muted-foreground">
+                            We never see your messages. You bring the API keys.
+                        </span>
                     </motion.p>
                 </div>
             </div>
@@ -201,25 +208,25 @@ export function HeroSection() {
                             damping: 25,
                         },
                     }}
-                    style={{transformStyle: 'preserve-3d', willChange: 'transform'}}
+                    style={{ transformStyle: 'preserve-3d', willChange: 'transform' }}
                     className="relative rounded-xl border border-white/10 bg-background/95 shadow-2xl overflow-hidden group"
                 >
                     <div
-                        className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent opacity-50"/>
+                        className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-transparent opacity-50" />
 
                     {/* Shimmer Effect */}
                     <motion.div
                         className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 z-50 pointer-events-none"
-                        initial={{x: '-100%'}}
-                        whileHover={{x: '200%'}}
-                        transition={{duration: 1.5, ease: 'easeInOut'}}
+                        initial={{ x: '-100%' }}
+                        whileHover={{ x: '200%' }}
+                        transition={{ duration: 1.5, ease: 'easeInOut' }}
                     />
 
                     {/* Window Controls */}
                     <div className="h-10 border-b border-white/10 flex items-center px-4 gap-2 bg-white/5">
-                        <div className="h-3 w-3 rounded-full bg-red-500/80"/>
-                        <div className="h-3 w-3 rounded-full bg-yellow-500/80"/>
-                        <div className="h-3 w-3 rounded-full bg-green-500/80"/>
+                        <div className="h-3 w-3 rounded-full bg-red-500/80" />
+                        <div className="h-3 w-3 rounded-full bg-yellow-500/80" />
+                        <div className="h-3 w-3 rounded-full bg-green-500/80" />
                     </div>
 
                     {/* Chat Interface Mockup */}
@@ -228,7 +235,7 @@ export function HeroSection() {
                         <div className="w-64 border-r border-white/10 bg-white/5 hidden md:flex flex-col p-4">
                             <div
                                 className="flex items-center gap-2 px-2 py-3 mb-4 rounded-lg border border-white/10 bg-white/5 text-sm font-medium text-muted-foreground hover:bg-white/10 cursor-pointer transition-colors">
-                                <Plus className="h-4 w-4"/>
+                                <Plus className="h-4 w-4" />
                                 <span>New Chat</span>
                             </div>
 
@@ -244,7 +251,7 @@ export function HeroSection() {
                                             key={i}
                                             className="flex items-center gap-3 px-2 py-2 rounded-md text-sm text-muted-foreground hover:text-foreground hover:bg-white/5 cursor-pointer transition-colors"
                                         >
-                                            <MessageSquare className="h-4 w-4 opacity-50"/>
+                                            <MessageSquare className="h-4 w-4 opacity-50" />
                                             <span className="truncate">{item}</span>
                                         </div>
                                     )
@@ -287,9 +294,9 @@ export function HeroSection() {
 
                                 {/* Current Active Message */}
                                 <motion.div
-                                    initial={{opacity: 0, y: 10}}
-                                    animate={isInView ? {opacity: 1, y: 0} : {}}
-                                    transition={{delay: 0.5}}
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                    transition={{ delay: 0.5 }}
                                     className="flex justify-end"
                                 >
                                     <div
@@ -300,9 +307,9 @@ export function HeroSection() {
 
                                 {/* AI Response */}
                                 <motion.div
-                                    initial={{opacity: 0}}
-                                    animate={isInView ? {opacity: 1} : {}}
-                                    transition={{delay: 1.0}}
+                                    initial={{ opacity: 0 }}
+                                    animate={isInView ? { opacity: 1 } : {}}
+                                    transition={{ delay: 1.0 }}
                                     className="flex justify-start"
                                 >
                                     <div className="bg-muted px-4 py-2 rounded-2xl rounded-tl-sm max-w-[80%] shadow-sm">
@@ -319,10 +326,10 @@ export function HeroSection() {
                             <div className="mt-4 relative shrink-0">
                                 <div
                                     className="h-12 rounded-lg border border-white/10 bg-white/5 w-full flex items-center px-4 gap-3">
-                                    <div className="h-4 w-4 rounded-full border border-white/20"/>
-                                    <div className="h-2 w-32 bg-white/10 rounded-full"/>
-                                    <div className="flex-1"/>
-                                    <Send className="h-4 w-4 text-muted-foreground"/>
+                                    <div className="h-4 w-4 rounded-full border border-white/20" />
+                                    <div className="h-2 w-32 bg-white/10 rounded-full" />
+                                    <div className="flex-1" />
+                                    <Send className="h-4 w-4 text-muted-foreground" />
                                 </div>
                             </div>
                         </div>
@@ -330,17 +337,17 @@ export function HeroSection() {
                 </motion.div>
 
                 {/* Glow effect behind */}
-                <div className="absolute -inset-4 bg-primary/20 blur-3xl -z-10 rounded-[50%]"/>
+                <div className="absolute -inset-4 bg-primary/20 blur-3xl -z-10 rounded-[50%]" />
             </div>
         </section>
     );
 }
 
 function Typewriter({
-                        text,
-                        shouldStart = false,
-                        delay = 0,
-                    }: {
+    text,
+    shouldStart = false,
+    delay = 0,
+}: {
     text: string;
     shouldStart?: boolean;
     delay?: number;

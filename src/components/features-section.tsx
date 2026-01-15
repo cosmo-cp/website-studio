@@ -14,7 +14,7 @@ export function FeaturesSection() {
     <section id="features" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Feature Rich, Future Ready</h2>
+          <h2 className="!text-3xl md:!text-4xl font-bold !mb-4">Feature Rich, Future Ready</h2>
           <p className="text-muted-foreground mx-auto">
             Everything you need today, with a clear roadmap for tomorrow.
           </p>
@@ -81,7 +81,7 @@ export function FeaturesSection() {
                         </span>
                       )}
                       {feature.status === 'coming' && (
-                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-muted text-muted-foreground uppercase tracking-wide">
+                        <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-muted text-muted-foreground uppercase tracking-wide whitespace-nowrap">
                           Coming Soon
                         </span>
                       )}
