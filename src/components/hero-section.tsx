@@ -1,11 +1,11 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { Apple, ChevronDown, Monitor, Terminal } from 'lucide-react';
-import { Hero3DCard } from './hero/hero-chat-mockup';
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+const Hero3DCard = lazy(() => import('./hero/hero-chat-mockup').then(module => ({ default: module.Hero3DCard })));
 
 const CONCEPTS = [
     {
@@ -30,7 +30,6 @@ export function HeroSection() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [concept, setConcept] = useState(CONCEPTS[0]);
 
-
     useEffect(() => {
         setConcept(CONCEPTS[Math.floor(Math.random() * CONCEPTS.length)]);
 
@@ -49,7 +48,7 @@ export function HeroSection() {
     const { siteConfig } = useDocusaurusContext();
     const intro = "Cosmo Studio v" + siteConfig.customFields.version as string + " has landed 🚀";
 
-    const downloadOptions: Record<string, { label: string; icon: React.ElementType; href: any; disabled?: boolean }> = {
+    const downloadOptions = useMemo(() => ({
         macOS: {
             label: 'Download for macOS',
             icon: Apple,
@@ -66,7 +65,12 @@ export function HeroSection() {
             icon: Terminal,
             href: siteConfig.customFields.downloadLinks["linux"],
         },
-    };
+    }), [siteConfig.customFields.downloadLinks]);
+
+    // Prevent hydration mismatch by rendering a consistent state initially or checking for mount
+    // In this case, we default to Windows (as set in useState) but the useEffect updates it.
+    // The mismatch usually happens if we render different UI based on the initial state vs what the server rendered.
+    // Since we are client-side only for this dynamic part (buttons), it's generally fine.
 
     return (
         <section className="relative pt-32 pb-20 md:pt-34 md:pb-32 overflow-hidden">
@@ -129,6 +133,7 @@ export function HeroSection() {
                                 >
                                     {os === 'Windows' && <Monitor className="h-5 w-5" />}
                                     {os === 'Linux' && <Terminal className="h-5 w-5" />}
+                                    {os === 'macOS' && <Apple className="h-5 w-5" />}
                                     Download for {os}
                                 </a>
                             </Button>
@@ -155,7 +160,6 @@ export function HeroSection() {
                                                 onClick={() => {
                                                     setIsDropdownOpen(false);
                                                 }}
-                                                aria-disabled={option?.disabled ?? false}
                                             >
                                                 <Icon className="h-4 w-4" />
                                                 {option.label}
@@ -181,7 +185,9 @@ export function HeroSection() {
                 </div>
             </div>
 
-            <Hero3DCard question={concept.question} answer={concept.answer} />
+            <Suspense fallback={<div className="h-[400px] md:h-[600px] w-full max-w-6xl mx-auto flex items-center justify-center text-muted-foreground/20">Loading 3D Preview...</div>}>
+                <Hero3DCard question={concept.question} answer={concept.answer} />
+            </Suspense>
         </section>
     );
 }

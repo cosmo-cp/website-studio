@@ -35,7 +35,7 @@ export function Typewriter({
                 clearInterval(timer);
             }
         }, 20);
-        return () => clearTimeout(timer);
+        return () => clearInterval(timer);
     }, [text, hasStarted]);
 
     return <p className="mb-2 leading-relaxed">{displayedText}</p>;
