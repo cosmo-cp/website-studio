@@ -26,7 +26,7 @@ const CONCEPTS = [
 ];
 
 export function HeroSection() {
-    const [os, setOs] = useState<'macOS' | 'Windows' | 'Linux'>('Windows');
+    const [os, setOs] = useState<'macOS' | 'Windows' | 'Linux'>('macOS');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [concept, setConcept] = useState(CONCEPTS[0]);
 
@@ -41,7 +41,7 @@ export function HeroSection() {
         } else if (userAgent.includes('mac')) {
             setOs('macOS');
         } else {
-            setOs('Windows');
+            setOs('macOS');
         }
     }, []);
 
