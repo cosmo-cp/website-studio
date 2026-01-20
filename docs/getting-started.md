@@ -8,21 +8,24 @@ This guide walks you through the fastest way to get Cosmo Studio running and con
 
 ## Install Cosmo Studio
 
-Download the installer for your operating system and complete the setup. The app runs on Windows, macOS, and Linux.
+Download the **[installer](https://cosmocp.com/)** for your operating system and complete the setup. The app runs on Windows, macOS, and Linux.
+For more details checkout the **[Installation Guide](./installation.md)**
 
 ## Add your first provider
 
-1. Open **Settings**.
-2. Select **Providers**.
+1. Install and Open app
+2. Go to **Settings** from the side menu
+3. Select **Providers**.
+4. Click on **Add Provider**
 3. Choose a provider (OpenAI, Anthropic, Google, or Ollama).
 4. Paste your API key and save.
 
 ## Start a chat
 
-Create a new chat, pick a model, and begin a conversation. You can switch providers at any time to compare results or choose a better fit for the task.
+Go to the Chat Window from the side menu and click on **New Chat** button, pick a model, and begin a conversation. You can switch providers at any time to continue your conversation.
 
 ## Tips for best results
 
-- Use clear prompts with specific outcomes.
-- Keep long-running threads organized by topic.
-- Review previous chats for context and reusable answers.
+* Use clear prompts with specific outcomes.
+* Keep long-running threads organized by different chats.
+* Review previous chats for context and reusable answers.

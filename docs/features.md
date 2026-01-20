@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Features
@@ -26,10 +26,6 @@ Add, edit, and remove providers with simple configuration flows. Keep keys organ
 
 Run the same experience on Windows, macOS, and Linux with consistent behavior across all supported platforms.
 
-## Developer features
+## Multimodal input
 
-- **Multimodal input:** Support for image-based prompts in developer workflows.
-
-## Roadmap items
-
-- **Expanded integrations:** More model providers and productivity workflows.
+Support for image-based prompts in chat.

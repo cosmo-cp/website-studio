@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 5
 ---
 
 # Troubleshooting
@@ -24,4 +24,10 @@ If Cosmo Studio isn’t behaving as expected, use the checks below to narrow dow
 
 ## Still stuck?
 
-Collect logs and configuration details before reaching out to support. Include your OS version, provider, and the exact error message.
+Collect logs foldeer and configuration details before reaching out to [support@cosmocp.com](mailto:support@cosmocp.com). Include your OS version, provider, and the exact error message.
+
+### Logs Location
+
+* macOs: /Users/&lt;Username&gt;/Library/Application Support/CosmoStudio/logs
+* Windows: 
+* Linux: 
