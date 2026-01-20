@@ -146,7 +146,7 @@ const config: Config = {
                     ],
                 },
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} Cosmo Studio Inc.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Cosmo Studio`,
         },
         prism: {
             theme: prismThemes.okaidia,
