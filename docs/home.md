@@ -18,6 +18,6 @@ Cosmo Studio is a cross-platform desktop **AI Command Center** for focused, priv
 ## What’s next
 
 - Follow **[Getting started](./getting-started.md)** for setup details.
-- Review **[Installation](./installation.md)** and **[Configuration](./configuration.md)** for deeper setup guidance.
+- Review **[Installation](./installation.md)** for setup guidance.
 - Explore **[Features](./features.md)** to see what Cosmo Studio can do.
 - Check **[Troubleshooting](./troubleshooting.md)** if you run into issues.
