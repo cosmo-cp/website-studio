@@ -24,7 +24,7 @@ If Cosmo Studio isn’t behaving as expected, use the checks below to narrow dow
 
 ## Still stuck?
 
-Collect logs folder and configuration details before reaching out to [support@cosmocp.com](mailto:support@cosmocp.com). Include your OS version, provider, and the exact error message.
+Collect logs folder before reaching out to [support@cosmocp.com](mailto:support@cosmocp.com). Include your OS version, provider, and the exact error message.
 
 ### Logs Location
 

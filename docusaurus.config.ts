@@ -1,5 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -94,12 +94,12 @@ const config: Config = {
                     position: 'left',
                     label: 'Docs',
                 },
-                {to: '/blog', label: 'Blog', position: 'left'},
+                { to: '/blog', label: 'Blog', position: 'left' },
                 {
                     href: 'https://github.com/cosmo-cp/cosmo-studio',
                     className: 'header-github-link',
                     position: 'right',
-                }, 
+                },
 
                 {
                     href: 'https://github.com/Cosmo-mcp/cosmocp-desktop/releases',
@@ -124,7 +124,7 @@ const config: Config = {
                         },
                         {
                             label: 'Changelog',
-                            to: '/blog',
+                            to: '/docs/release-notes',
                         },
                     ],
                 },
@@ -145,6 +145,15 @@ const config: Config = {
                         },
                     ],
                 },
+                {
+                    title: "Support",
+                    items: [
+                        {
+                            label: "support@cosmocp.com",
+                            to: "mailto:support@cosmocp.com"
+                        }
+                    ]
+                }
             ],
             copyright: `Copyright © ${new Date().getFullYear()} Cosmo Studio`,
         },
