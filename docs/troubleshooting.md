@@ -29,5 +29,5 @@ Collect logs folder before reaching out to [support@cosmocp.com](mailto:support@
 ### Logs Location
 
 * macOs: /Users/&lt;Username&gt;/Library/Application Support/CosmoStudio/logs
-* Windows: 
+* Windows: C:\Users\\&lt;Username&gt;\AppData\Roaming\CosmoStudio\logs
 * Linux: 
