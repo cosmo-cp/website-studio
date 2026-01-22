@@ -398,3 +398,11 @@ html[data-theme='dark'] .header-github-link::before {
 .footer__link-item::after {
     display: none !important;
 }
+
+ol {
+    list-style: auto;
+}
+
+ul {
+    list-style: disc;
+}

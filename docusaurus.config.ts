@@ -128,7 +128,7 @@ const config: Config = {
                         },
                         {
                             label: 'Changelog',
-                            to: '/blog',
+                            to: '/docs/release-notes',
                         },
                     ],
                 },
@@ -149,8 +149,17 @@ const config: Config = {
                         },
                     ],
                 },
+                {
+                    title: "Support",
+                    items: [
+                        {
+                            label: "support@cosmocp.com",
+                            to: "mailto:support@cosmocp.com"
+                        }
+                    ]
+                }
             ],
-            copyright: `Copyright © ${new Date().getFullYear()} Cosmo Studio Inc.`,
+            copyright: `Copyright © ${new Date().getFullYear()} Cosmo Studio`,
         },
         prism: {
             theme: prismThemes.okaidia,
