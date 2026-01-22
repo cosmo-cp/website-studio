@@ -22,7 +22,7 @@ export function FaqSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="!text-3xl md:!text-4xl font-bold !mb-4">Frequently Asked Questions</h2>
           <p className="text-muted-foreground">
             Everything you need to know about Cosmo Studio
           </p>

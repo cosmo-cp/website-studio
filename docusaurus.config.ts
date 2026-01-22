@@ -18,6 +18,10 @@ const config: Config = {
         },
     },
 
+    stylesheets: [
+        'https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=IBM+Plex+Mono:wght@400;500;600&family=Spectral:wght@400;500;600;700&display=swap',
+    ],
+
     // Set the production url of your site here
     url: 'http://cosmocp.com',
     // Set the /<baseUrl>/ pathname under which your site is served
@@ -34,7 +38,7 @@ const config: Config = {
     customFields: {
         version: '1.0.1',
         downloadLinks: {
-            mac: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/Cosmo.Studio-darwin-arm64-1.0.1.zip',
+            mac: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1_macos_signed/Cosmo.Studio-darwin-arm64-1.0.1.zip',
             windows: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/Cosmo.Studio-1.0.1.Setup.exe',
             linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/cosmostudio_1.0.1_amd64.deb',
         },

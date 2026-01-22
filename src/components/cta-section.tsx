@@ -8,7 +8,7 @@ export function CTASection() {
       <div className="absolute inset-0 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] pointer-events-none" />
       
       <div className="container mx-auto px-4 text-center relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+        <h2 className="!text-4xl md:!text-5xl font-bold !mb-6 tracking-tight">
           Ready to upgrade your workflow?
         </h2>
         <p className="text-xl text-muted-foreground mb-10 mx-auto">
