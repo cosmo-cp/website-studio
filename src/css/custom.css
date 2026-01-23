@@ -269,17 +269,23 @@ body {
     height: calc(100vh - 60px) !important;
     max-height: none !important;
     overflow-y: auto !important;
+    /* Fix for sliding panel system - container holds both primary and secondary panels */
+    display: flex !important;
+    width: 200% !important;
+    transition: transform 0.3s ease !important;
+}
+
+/* Each panel (primary and secondary) takes 50% of the container */
+.navbar-sidebar__item {
+    flex-shrink: 0 !important;
+    width: 50% !important;
+    overflow-y: auto !important;
 }
 
 /* Ensure the sidebar takes full height */
 .navbar-sidebar {
     height: 100vh !important;
     max-height: 100vh !important;
-}
-
-/* Fix for items container within sidebar */
-.navbar-sidebar__items--show-secondary {
-    transform: translateX(-100%);
 }
 
 /* Ensure menu items are visible */
@@ -299,6 +305,29 @@ body {
 .navbar-sidebar__item {
     padding: 0.25rem 1rem;
     font-weight: 500;
+}
+
+/* Breadcrumb alignment fix */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumbs__link {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Align the separator arrow */
+.breadcrumbs__item--active,
+.breadcrumbs__item::before {
+    display: inline-flex;
+    align-items: center;
 }
 
 /* CTA Button Styling */
