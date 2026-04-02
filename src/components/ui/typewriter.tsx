@@ -6,11 +6,7 @@ interface TypewriterProps {
     delay?: number;
 }
 
-export function Typewriter({
-    text,
-    shouldStart = false,
-    delay = 0,
-}: TypewriterProps) {
+export function Typewriter({ text, shouldStart = false, delay = 0 }: TypewriterProps) {
     const [displayedText, setDisplayedText] = useState('');
     const [hasStarted, setHasStarted] = useState(false);
 

@@ -76,11 +76,11 @@ Click on the **"Create API key"** button. A dialog box will appear prompting you
 In this dialog, you'll need to:
 
 1. **Name your key** (optional but recommended for organization)
-   - Example: "Gemini API Key" or "My App API Key"
+    - Example: "Gemini API Key" or "My App API Key"
 
 2. **Choose an imported project**
-   - If you already have a Google Cloud project, select it from the dropdown
-   - If you don't have a project yet, you can create a new one directly from this dialog
+    - If you already have a Google Cloud project, select it from the dropdown
+    - If you don't have a project yet, you can create a new one directly from this dialog
 
 > **💡 Pro Tip:** If you're just getting started, creating a new project is quick and easy. Google will automatically set up the necessary configurations for you.
 
