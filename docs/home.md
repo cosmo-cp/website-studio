@@ -14,7 +14,6 @@ Cosmo Studio is a cross-platform desktop **AI Command Center** for focused, priv
 - **Markdown-ready:** Render rich responses with code blocks and formatting out of the box.
 - **Cross-platform:** Works on Windows, macOS, and Linux.
 
-
 ## What’s next
 
 - Follow **[Getting started](./getting-started.md)** for setup details.

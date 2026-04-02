@@ -7,7 +7,7 @@ tags: [tutorial, openai, api, setup]
 
 # 🔑 **How to Get Your OpenAI API Key - A Complete Guide**
 
-Getting started with OpenAI's API is the gateway to using powerful models like GPT-5/x and o1/x. Whether you're building an AI application or using a tool like Cosmo Studio, obtainining your API key is a simple process. In this guide, we'll walk you through the exact steps to get your OpenAI API key. 
+Getting started with OpenAI's API is the gateway to using powerful models like GPT-5/x and o1/x. Whether you're building an AI application or using a tool like Cosmo Studio, obtainining your API key is a simple process. In this guide, we'll walk you through the exact steps to get your OpenAI API key.
 
 ---
 
@@ -49,7 +49,7 @@ This page is where you manage all your secret keys.
 
 ### Step 2: Create Your Secret Key
 
-Once you're on the API keys page, look for the section titled "API keys". 
+Once you're on the API keys page, look for the section titled "API keys".
 
 Click on the **"Create new secret key"** button as shown below:
 
@@ -60,6 +60,7 @@ A dialog box will appear prompting you to configure your new API key.
 ![OpenAI Key Configuration Popup](./images/openai-key-popup.png)
 
 In this dialog, you can:
+
 1. **Owned by**: Select "You" (default) or a Service Account if applicable.
 2. **Name (Optional)**: Give your key a descriptive name like "cosmo" or "Production".
 3. **Project**: Choose the project this key should be tied to (usually "Default project").
@@ -71,7 +72,7 @@ Click the **"Create secret key"** button at the bottom right to generate your ke
 
 ### Step 3: Copy and Secure Your API Key
 
-After clicking create, a final popup will appear showing your unique secret key. 
+After clicking create, a final popup will appear showing your unique secret key.
 
 **IMPORTANT**: Copy this key immediately (using the copy icon) and store it in a safe place. OpenAI will **not show this key to you again** for security reasons. If you lose it, you will have to create a new one.
 

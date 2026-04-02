@@ -6,7 +6,7 @@ sidebar_position: 6
 
 ## Which providers are supported?
 
-Cosmo Studio supports OpenAI, Anthropic, Google, and Ollama.
+Cosmo Studio supports a large and growing list of providers including OpenAI, Anthropic, Google Gemini, Ollama, xAI, Groq, Mistral, Perplexity, DeepSeek, and more.
 
 ## Where is chat history stored?
 

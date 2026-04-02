@@ -36,11 +36,12 @@ const config: Config = {
     onBrokenLinks: 'throw',
 
     customFields: {
-        version: '1.0.1',
+        version: '1.1.2',
         downloadLinks: {
-            mac: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1_macos_signed/Cosmo.Studio-darwin-arm64-1.0.1.zip',
-            windows: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/Cosmo.Studio-1.0.1.Setup.exe',
-            linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.0.1/cosmostudio_1.0.1_amd64.deb',
+            mac: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.2/Cosmo.Studio-darwin-arm64-1.1.2.zip',
+            windows:
+                'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.2/Cosmo.Studio-1.1.2.Setup.exe',
+            linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.2/cosmostudio_1.1.2_amd64.deb',
         },
     },
 
@@ -57,7 +58,7 @@ const config: Config = {
             'classic',
             {
                 docs: {
-                    sidebarPath: './sidebars.ts'
+                    sidebarPath: './sidebars.ts',
                 },
                 blog: {
                     showReadingTime: true,
@@ -81,7 +82,7 @@ const config: Config = {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
         colorMode: {
-            defaultMode: "light",
+            defaultMode: 'light',
             disableSwitch: false,
             respectPrefersColorScheme: false, // ignore system theme
         },
@@ -106,7 +107,7 @@ const config: Config = {
                 },
 
                 {
-                    href: 'https://github.com/Cosmo-mcp/cosmocp-desktop/releases',
+                    href: 'https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.2',
                     html: '<span class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg> Get Cosmo Studio</span>',
                     position: 'right',
                     className: 'button button--primary button--lg navbar-cta-button',
@@ -124,7 +125,7 @@ const config: Config = {
                         },
                         {
                             label: 'Download',
-                            href: 'https://github.com/Cosmo-mcp/cosmocp-desktop/releases',
+                            href: 'https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.2',
                         },
                         {
                             label: 'Changelog',
@@ -150,14 +151,14 @@ const config: Config = {
                     ],
                 },
                 {
-                    title: "Support",
+                    title: 'Support',
                     items: [
                         {
-                            label: "support@cosmocp.com",
-                            to: "mailto:support@cosmocp.com"
-                        }
-                    ]
-                }
+                            label: 'support@cosmocp.com',
+                            to: 'mailto:support@cosmocp.com',
+                        },
+                    ],
+                },
             ],
             copyright: `Copyright © ${new Date().getFullYear()} Cosmo Studio`,
         },
@@ -170,18 +171,18 @@ const config: Config = {
     plugins: [
         async function myPlugin(context, options) {
             return {
-                name: "docusaurus-tailwindcss",
+                name: 'docusaurus-tailwindcss',
                 configurePostCss(postcssOptions) {
                     postcssOptions.plugins = [
-                        require("postcss-import"),
-                        require("@tailwindcss/postcss"),
-                        require("autoprefixer"),
+                        require('postcss-import'),
+                        require('@tailwindcss/postcss'),
+                        require('autoprefixer'),
                     ];
                     return postcssOptions;
                 },
-            }
+            };
         },
-    ]
+    ],
 };
 
 export default config;

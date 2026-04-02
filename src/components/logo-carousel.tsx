@@ -1,45 +1,52 @@
 'use client';
 
-import {SUPPORTED_PROVIDERS} from '@site/src/constants/constants';
-import {cn} from '@site/src/lib/utils';
-import {motion} from 'framer-motion';
+import { SUPPORTED_PROVIDERS } from '@site/src/constants/constants';
+import { motion } from 'framer-motion';
+
+const DURATION_PER_PROVIDER = 4; // seconds each provider adds to the scroll duration
 
 export function LogoCarousel() {
+    const duration = SUPPORTED_PROVIDERS.length * DURATION_PER_PROVIDER;
     return (
-        <section className="py-15 border-y border-white/5 bg-white/5 overflow-hidden">
-            <div className="container mx-auto px-4 !mb-8 text-center">
-                <p className="text-sm text-muted-foreground font-medium">Powering your workflow with top-tier models</p>
+        <section className="overflow-hidden border-y border-white/5 bg-white/5 py-15">
+            <div className="container mx-auto !mb-8 px-4 text-center">
+                <p className="text-muted-foreground text-sm font-medium">
+                    Powering your workflow with top-tier models
+                </p>
             </div>
 
-            <div className="flex overflow-hidden mask-image-linear-gradient">
+            <div className="mask-image-linear-gradient flex overflow-hidden">
                 <motion.div
-                    className="flex gap-16 items-center pr-16"
-                    animate={{x: "-50%"}}
+                    className="flex items-center gap-16 pr-16"
+                    animate={{ x: '-50%' }}
                     transition={{
-                        duration: 20,
-                        ease: "linear",
-                        repeat: Infinity
+                        duration,
+                        ease: 'linear',
+                        repeat: Infinity,
                     }}
                 >
-                    {[...SUPPORTED_PROVIDERS, ...SUPPORTED_PROVIDERS, ...SUPPORTED_PROVIDERS, ...SUPPORTED_PROVIDERS].map((provider, index) => (
+                    {[
+                        ...SUPPORTED_PROVIDERS,
+                        ...SUPPORTED_PROVIDERS,
+                        ...SUPPORTED_PROVIDERS,
+                        ...SUPPORTED_PROVIDERS,
+                    ].map((provider, index) => (
                         <div
                             key={`${provider.id}-${index}`}
-                            className="flex items-center gap-3 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300 cursor-pointer min-w-max"
+                            className="flex min-w-max cursor-pointer items-center gap-3 opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:dark:filter-none"
                         >
-                            <div className={cn(
-                                "relative rounded-md flex items-center justify-center",
-                                provider.needsBg
-                                    ? "bg-foreground/10 dark:bg-foreground/20"
-                                    : "bg-transparent"
-                            )}>
-                                <img
-                                    src={provider.logo}
-                                    alt={provider.name}
-                                    className="object-contain w-10 h-10"
-                                />
-                            </div>
+                            <img
+                                src={provider.logo}
+                                alt={provider.name}
+                                className="logo-carousel-img h-10 w-10 object-contain"
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).style.display = 'none';
+                                }}
+                            />
 
-                            <span className="text-3xl font-semibold tracking-tight">{provider.name}</span>
+                            <span className="text-3xl font-semibold tracking-tight">
+                                {provider.name}
+                            </span>
                         </div>
                     ))}
                 </motion.div>
