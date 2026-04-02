@@ -8,7 +8,7 @@ sidebar_position: 7
 
 - **Personas**: Custom tailored AI experiences.
 - **MCP Support**: Model Context Protocol integration.
-- **Commands**: New keyboard-driven interface.
+- **Commands**: Quickly navigate through frequently used prompts and actions.
 - **Expanded Providers**: Support for xAI, Groq, Mistral, Moonshot, DeepSeek, Perplexity, Cohere, LMStudio, HuggingFace.
 - **Enhanced UX**: Thinking model indicator, name labels, stop streaming, and token usage tracker.
 - **Bug Fixes**: Improved encryption fallbacks and local chat history updates.

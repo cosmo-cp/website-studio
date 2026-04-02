@@ -24,7 +24,7 @@ Cosmo Studio supports the **Model Context Protocol**, allowing for deeper integr
 
 ## Commands ⌨️
 
-Navigate with speed using our keyboard-driven **Commands** interface. Trigger actions, switch personas, and manage your workflow directly from your keyboard.
+Navigate with speed using our keyboard-driven **Commands** interface. Quickly navigate through frequently used prompts and actions.
 
 ## Enhanced Chat Experience 💬
 

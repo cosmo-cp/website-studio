@@ -62,23 +62,28 @@ export const FEATURES_LIVE = [
 
 export const FEATURES_ROADMAP = [
     {
+        title: 'Web Search',
+        description: 'Search the web in real-time to provide up-to-date information and cite sources directly in your chat.',
+        status: 'coming',
+    },
+    {
+        title: 'Workflow',
+        description: 'Build complex automation workflows and multi-step processes with a visual drag-and-drop builder.',
+        status: 'coming',
+    },
+    {
         title: 'Agent Mode',
         description: 'Automate multi-step tasks with intelligent, goal-driven agents that work on your behalf.',
         status: 'coming',
     },
     {
-        title: 'Chat History Sync',
-        description: 'Encrypted sync of your conversations across all your devices, seamlessly and privately.',
+        title: 'Code Execution',
+        description: 'Run Python and Javascript code directly in your chat to perform data analysis, math, and more.',
         status: 'coming',
     },
     {
         title: 'Mobile App',
         description: 'Bring the full power of Cosmo Studio to iOS and Android.',
-        status: 'coming',
-    },
-    {
-        title: 'Plugin Ecosystem',
-        description: 'Extend functionality with community-built plugins and first-party integrations.',
         status: 'coming',
     },
 ];

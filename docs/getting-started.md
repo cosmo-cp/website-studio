@@ -26,7 +26,7 @@ Go to the Chat Window from the side menu and click on **New Chat** button, pick 
 
 ## Customize your experience with Personas
 
-Navigate to the **Personas** section to create specialized AI profiles. You can define custom system instructions for different tasks like coding, writing, or analysis. To use a persona, simply select it from the dropdown in any chat window.
+Navigate to the **Personas** section to create specialized AI profiles. You can define custom system instructions for different tasks like coding, writing, or analysis. Use `@` in the chat input and select the persona you want to use.
 
 ## Tips for best results
 
