@@ -256,10 +256,6 @@ body {
     border-radius: 50%;
 }
 
-.navbar__logo img {
-    border: 2px solid black;
-    border-radius: 50%;
-}
 
 /* Mobile Sidebar Styling */
 .navbar-sidebar {

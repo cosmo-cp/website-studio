@@ -91,6 +91,7 @@ const config: Config = {
             logo: {
                 alt: 'Cosmo Studio',
                 src: 'img/logo.svg',
+                srcDark: 'img/logo-dark.svg',
             },
             items: [
                 {
