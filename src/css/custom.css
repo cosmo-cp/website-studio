@@ -401,6 +401,7 @@ html[data-theme='dark'] .header-github-link::before {
     --ifm-footer-background-color: var(--background);
     --ifm-footer-padding-vertical: 4rem;
     border-top: 1px solid var(--border);
+    padding-bottom: calc(var(--ifm-footer-padding-vertical) + env(safe-area-inset-bottom));
 }
 
 .footer__title {
@@ -460,6 +461,7 @@ html[data-theme='dark'] .header-github-link::before {
 
 .footer-social-link::before {
     content: '';
+    display: block;
     width: 1.125rem;
     height: 1.125rem;
     background-color: currentColor;
