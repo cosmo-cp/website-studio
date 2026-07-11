@@ -4,6 +4,16 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+const socialMedia = {
+    x: {
+        href: 'https://x.com/cosmocp',
+        handle: '@cosmocp',
+    },
+    github: {
+        href: 'https://github.com/cosmo-cp/cosmo-studio',
+    },
+};
+
 const config: Config = {
     title: 'Cosmo Studio',
     tagline: 'Your All-in-One AI Command Center',
@@ -43,6 +53,7 @@ const config: Config = {
                 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.2/Cosmo.Studio-1.1.2.Setup.exe',
             linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.2/cosmostudio_1.1.2_amd64.deb',
         },
+        socialMedia,
     },
 
     // Even if you don't use internationalization, you can use this field to set
@@ -81,6 +92,12 @@ const config: Config = {
     themeConfig: {
         // Replace with your project's social card
         image: 'img/docusaurus-social-card.jpg',
+        metadata: [
+            { name: 'twitter:card', content: 'summary_large_image' },
+            { name: 'twitter:site', content: socialMedia.x.handle },
+            { name: 'twitter:creator', content: socialMedia.x.handle },
+            { property: 'og:site_name', content: 'Cosmo Studio' },
+        ],
         colorMode: {
             defaultMode: 'light',
             disableSwitch: false,
@@ -102,9 +119,16 @@ const config: Config = {
                 },
                 { to: '/blog', label: 'Blog', position: 'left' },
                 {
-                    href: 'https://github.com/cosmo-cp/cosmo-studio',
+                    href: socialMedia.x.href,
+                    className: 'header-x-link',
+                    position: 'right',
+                    'aria-label': 'Cosmo Studio on X',
+                },
+                {
+                    href: socialMedia.github.href,
                     className: 'header-github-link',
                     position: 'right',
+                    'aria-label': 'Cosmo Studio on GitHub',
                 },
             ],
         },
@@ -136,7 +160,11 @@ const config: Config = {
                         },
                         {
                             label: 'GitHub',
-                            href: 'https://github.com/cosmo-cp/cosmo-studio',
+                            href: socialMedia.github.href,
+                        },
+                        {
+                            label: 'X',
+                            href: socialMedia.x.href,
                         },
                         {
                             label: 'Blog',
