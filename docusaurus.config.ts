@@ -9,10 +9,34 @@ const socialMedia = {
         href: 'https://x.com/cosmocp',
         handle: '@cosmocp',
     },
+    linkedin: {
+        href: 'https://www.linkedin.com/company/cosmo-studio-in',
+    },
     github: {
         href: 'https://github.com/cosmo-cp/cosmo-studio',
     },
 };
+
+const socialLinks = [
+    {
+        label: 'GitHub',
+        href: socialMedia.github.href,
+        className: 'footer-social-link footer-social-link--github',
+        'aria-label': 'Cosmo Studio on GitHub',
+    },
+    {
+        label: 'X',
+        href: socialMedia.x.href,
+        className: 'footer-social-link footer-social-link--x',
+        'aria-label': 'Cosmo Studio on X',
+    },
+    {
+        label: 'LinkedIn',
+        href: socialMedia.linkedin.href,
+        className: 'footer-social-link footer-social-link--linkedin',
+        'aria-label': 'Cosmo Studio on LinkedIn',
+    },
+];
 
 const config: Config = {
     title: 'Cosmo Studio',
@@ -53,7 +77,10 @@ const config: Config = {
                 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.2/Cosmo.Studio-1.1.2.Setup.exe',
             linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.2/cosmostudio_1.1.2_amd64.deb',
         },
-        socialMedia,
+        socialMedia: {
+            ...socialMedia,
+            links: socialLinks,
+        },
     },
 
     // Even if you don't use internationalization, you can use this field to set
@@ -119,12 +146,6 @@ const config: Config = {
                 },
                 { to: '/blog', label: 'Blog', position: 'left' },
                 {
-                    href: socialMedia.x.href,
-                    className: 'header-x-link',
-                    position: 'right',
-                    'aria-label': 'Cosmo Studio on X',
-                },
-                {
                     href: socialMedia.github.href,
                     className: 'header-github-link',
                     position: 'right',
@@ -159,18 +180,15 @@ const config: Config = {
                             to: '/docs/home',
                         },
                         {
-                            label: 'GitHub',
-                            href: socialMedia.github.href,
-                        },
-                        {
-                            label: 'X',
-                            href: socialMedia.x.href,
-                        },
-                        {
                             label: 'Blog',
                             to: '/blog',
                         },
                     ],
+                },
+                {
+                    title: 'Social',
+                    className: 'footer-social-column',
+                    items: socialLinks,
                 },
                 {
                     title: 'Support',
