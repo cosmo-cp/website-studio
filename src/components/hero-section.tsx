@@ -24,6 +24,13 @@ const CONCEPTS = [
     },
 ];
 
+type DownloadLinks = Record<'mac' | 'windows' | 'linux', string>;
+
+type StudioCustomFields = {
+    version: string;
+    downloadLinks: DownloadLinks;
+};
+
 export function HeroSection() {
     const [os, setOs] = useState<'macOS' | 'Windows' | 'Linux'>('macOS');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -45,29 +52,30 @@ export function HeroSection() {
     }, []);
 
     const { siteConfig } = useDocusaurusContext();
-    const intro =
-        (('Cosmo Studio v' + siteConfig.customFields.version) as string) + ' has landed 🚀';
+    const customFields = siteConfig.customFields as StudioCustomFields;
+    const downloadLinks = customFields.downloadLinks;
+    const intro = `Cosmo Studio v${customFields.version} has landed 🚀`;
 
     const downloadOptions = useMemo(
         () => ({
             macOS: {
                 label: 'Download for macOS',
                 icon: Apple,
-                href: siteConfig.customFields.downloadLinks['mac'],
+                href: downloadLinks.mac,
                 disabled: true,
             },
             Windows: {
                 label: 'Download for Windows',
                 icon: Monitor,
-                href: siteConfig.customFields.downloadLinks['windows'],
+                href: downloadLinks.windows,
             },
             Linux: {
                 label: 'Download for Linux',
                 icon: Terminal,
-                href: siteConfig.customFields.downloadLinks['linux'],
+                href: downloadLinks.linux,
             },
         }),
-        [siteConfig.customFields.downloadLinks]
+        [downloadLinks]
     );
 
     // Prevent hydration mismatch by rendering a consistent state initially or checking for mount
