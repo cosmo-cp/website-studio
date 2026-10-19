@@ -19,7 +19,7 @@ type SocialRedirectProps = {
 
 export function SocialRedirect({ fallbackUrl, label, platform }: SocialRedirectProps): ReactNode {
     const { siteConfig } = useDocusaurusContext();
-    const socialMedia = siteConfig.customFields.socialMedia as SocialMediaConfig;
+    const socialMedia = (siteConfig.customFields?.socialMedia ?? {}) as SocialMediaConfig;
     const socialConfig = socialMedia[platform];
     const socialUrl = socialConfig?.href ?? fallbackUrl;
     const socialLabel = socialConfig?.handle ?? label;

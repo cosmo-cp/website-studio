@@ -9,6 +9,7 @@ Cosmo Studio focuses on speed, clarity, and control. Below is a practical overvi
 ## Multi-provider support
 
 Connect multiple AI providers and switch between them without changing tools. Cosmo Studio supports a vast array of models:
+
 - **Major Providers**: OpenAI, Anthropic, Google Gemini.
 - **High Performance**: Groq, xAI (Grok).
 - **Open Source & Local**: Ollama, LMStudio, HuggingFace, Mistral.
@@ -89,6 +90,7 @@ Navigate with speed using our keyboard-driven **Commands** interface. Quickly na
 ## Enhanced Chat Experience 💬
 
 A clean, distraction-free interface with advanced control:
+
 - **Reasoning Transparency**: Visible "thinking" process for reasoning-enabled models.
 - **Model Labels**: Clearly see which model generated each message.
 - **Streaming Control**: Stop model responses mid-stream with a single click.
