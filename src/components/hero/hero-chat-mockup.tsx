@@ -101,7 +101,7 @@ export function Hero3DCard({ question, answer }: Hero3DCardProps) {
 
                     {/* Main Chat */}
                     <div className="flex min-h-0 flex-1 flex-col p-6">
-                        <div className="scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent flex-1 space-y-6 overflow-y-auto pr-2">
+                        <div className="flex-1 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent space-y-6 overflow-y-auto pr-2">
                             {/* Previous Chat History (Faded) */}
                             <div className="flex justify-end opacity-40">
                                 <div className="bg-primary/20 text-foreground max-w-[80%] rounded-2xl rounded-tr-sm px-4 py-2 text-sm">

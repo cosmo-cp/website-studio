@@ -1,4 +1,3 @@
-
 export const SUPPORTED_PROVIDERS = [
     { id: 'openai', name: 'OpenAI', logo: '/img/openai.svg' },
     { id: 'anthropic', name: 'Anthropic', logo: '/img/anthropic.svg' },
@@ -63,22 +62,26 @@ export const FEATURES_LIVE = [
 export const FEATURES_ROADMAP = [
     {
         title: 'Web Search',
-        description: 'Search the web in real-time to provide up-to-date information and cite sources directly in your chat.',
+        description:
+            'Search the web in real-time to provide up-to-date information and cite sources directly in your chat.',
         status: 'coming',
     },
     {
         title: 'Workflow',
-        description: 'Build complex automation workflows and multi-step processes with a visual drag-and-drop builder.',
+        description:
+            'Build complex automation workflows and multi-step processes with a visual drag-and-drop builder.',
         status: 'coming',
     },
     {
         title: 'Agent Mode',
-        description: 'Automate multi-step tasks with intelligent, goal-driven agents that work on your behalf.',
+        description:
+            'Automate multi-step tasks with intelligent, goal-driven agents that work on your behalf.',
         status: 'coming',
     },
     {
         title: 'Code Execution',
-        description: 'Run Python and Javascript code directly in your chat to perform data analysis, math, and more.',
+        description:
+            'Run Python and Javascript code directly in your chat to perform data analysis, math, and more.',
         status: 'coming',
     },
     {
