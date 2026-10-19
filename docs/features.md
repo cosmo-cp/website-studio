@@ -50,7 +50,7 @@ Arguments must be a JSON array of strings, for example:
 To replace environment values, enter a JSON object of strings, for example:
 
 ```json
-{ "API_TOKEN": "replace-with-your-token" }
+{"API_TOKEN":"replace-with-your-token"}
 ```
 
 Leave the replacement environment field blank to keep the stored values. Cosmo stores agent environment values in the backend and shows variable names in the management screen, not their values. Only configure agents you trust.
@@ -73,13 +73,13 @@ Quotes are useful when the agent name contains spaces. The name must match an ag
 - **Edit** changes the command, arguments, workspace, authentication method ID, description, or replacement environment values.
 - **Delete** removes the agent definition from Cosmo. It does not uninstall its package or executable.
 
-| Problem                            | What to check                                                                                              |
-| ---------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| Agent is missing from the selector | Confirm it is enabled in **Settings → Agents** and reload the chat if needed.                              |
-| Chat asks for a workspace path     | Enter a path in the composer or set a default workspace in the agent's edit dialog.                        |
-| Registry entry shows **Manual**    | That distribution type cannot be installed from this dialog in this version.                               |
-| Test connection fails              | Confirm the command is available to Cosmo, review arguments and authentication, and try a valid workspace. |
-| Agent cannot access project files  | Check the workspace path and local user permissions.                                                       |
+| Problem | What to check |
+| --- | --- |
+| Agent is missing from the selector | Confirm it is enabled in **Settings → Agents** and reload the chat if needed. |
+| Chat asks for a workspace path | Enter a path in the composer or set a default workspace in the agent's edit dialog. |
+| Registry entry shows **Manual** | That distribution type cannot be installed from this dialog in this version. |
+| Test connection fails | Confirm the command is available to Cosmo, review arguments and authentication, and try a valid workspace. |
+| Agent cannot access project files | Check the workspace path and local user permissions. |
 
 ACP agents execute locally with access to the configured workspace and permissions granted by their runtime. Review an agent's source and requirements before installing or running it.
 
