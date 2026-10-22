@@ -212,7 +212,7 @@ export default function PlansPage(): ReactNode {
                                                     {plan.name === 'Community' &&
                                                     feature ===
                                                         `${providerCount} model providers` ? (
-                                                        <Link to="/docs/support-model-providers">
+                                                        <Link>
                                                             {feature}
                                                         </Link>
                                                     ) : (
