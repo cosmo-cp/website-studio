@@ -139,9 +139,7 @@ export function HeroSection() {
                             >
                                 <a
                                     onClick={() => {
-                                        track("Download button clicked", {
-                                            os: os
-                                        })
+                                        track(`Download button clicked for ${os}`);
                                     }}
                                     href={downloadOptions[os].href}
                                     className="!text-primary-foreground [color:inherit] !no-underline"
