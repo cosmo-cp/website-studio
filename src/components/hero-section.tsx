@@ -4,7 +4,9 @@ import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { Apple, ChevronDown, Monitor, Terminal } from 'lucide-react';
+
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {track} from "@vercel/analytics";
 const Hero3DCard = lazy(() =>
     import('./hero/hero-chat-mockup').then((module) => ({ default: module.Hero3DCard }))
 );
@@ -136,6 +138,11 @@ export function HeroSection() {
                                 asChild
                             >
                                 <a
+                                    onClick={() => {
+                                        track("Download button clicked", {
+                                            os: os
+                                        })
+                                    }}
                                     href={downloadOptions[os].href}
                                     className="!text-primary-foreground [color:inherit] !no-underline"
                                     rel="nofollow noopener noreferrer"
