@@ -27,35 +27,35 @@ export const FEATURES_LIVE = [
         description:
             'OpenAI, Anthropic, Gemini, xAI, Groq, Mistral, DeepSeek, Perplexity, Cohere, LM Studio, HuggingFace, Ollama & more.',
         icon: 'Cpu',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
     {
-        title: 'Personas',
+        title: 'Agent Client Protocol(ACP)',
         description:
-            'Create custom AI personas with unique system prompts and personalities tailored to your workflow.',
-        icon: 'Key',
-        badges: ['New in v1.1.2'],
+            'Install compatible local agents from the ACP registry and chat with them in a dedicated workspace.',
+        icon: 'Bot',
+        badges: ['New in v1.1.4'],
     },
     {
         title: 'MCP Servers',
         description:
             'Connect Model Context Protocol servers to supercharge your AI with external tools and live data.',
         icon: 'Monitor',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
     {
         title: 'Slash Commands',
         description:
             'Trigger powerful actions instantly with built-in slash commands right in your chat input.',
         icon: 'MessageSquare',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
     {
         title: 'Thinking & Token Insights',
         description:
             'Watch the model think in real-time, track token usage per message, and stop streaming anytime.',
         icon: 'Cpu',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
 ];
 
@@ -70,12 +70,6 @@ export const FEATURES_ROADMAP = [
         title: 'Workflow',
         description:
             'Build complex automation workflows and multi-step processes with a visual drag-and-drop builder.',
-        status: 'coming',
-    },
-    {
-        title: 'Agent Mode',
-        description:
-            'Automate multi-step tasks with intelligent, goal-driven agents that work on your behalf.',
         status: 'coming',
     },
     {
