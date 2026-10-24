@@ -98,6 +98,9 @@ const config: Config = {
                 docs: {
                     sidebarPath: './sidebars.ts',
                 },
+                pages: {
+                    exclude: ['**/plans.tsx'],
+                },
                 blog: {
                     showReadingTime: true,
                     feedOptions: {
@@ -160,7 +163,6 @@ const config: Config = {
                     position: 'left',
                     activeBaseRegex: '^/$',
                 },
-                { to: '/plans', label: 'Plans', position: 'left' },
                 {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
@@ -181,10 +183,6 @@ const config: Config = {
                 {
                     title: 'Product',
                     items: [
-                        {
-                            label: 'Plans',
-                            to: '/plans',
-                        },
                         {
                             label: 'Features',
                             to: '/docs/features',

@@ -22,9 +22,6 @@ export function PricingSection() {
                         Cosmo is your workspace. Model usage is billed separately by your cloud
                         provider. Local models run on your hardware.
                     </p>
-                    <Link to="/plans" className="studio-text-link">
-                        Compare every feature <TextArrow />
-                    </Link>
                 </div>
                 <div className="price-summary">
                     <h3>Community</h3>
@@ -35,22 +32,20 @@ export function PricingSection() {
                         Chat, local models, your own keys, MCP tools, ACP agents, commands, and
                         personas.
                     </p>
-                    <Link to="/plans" className="studio-button studio-button--ink">
-                        Explore Community <TextArrow />
+                    <Link
+                        to="https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.4"
+                        className="studio-button studio-button--ink"
+                    >
+                        Download Community <TextArrow />
                     </Link>
                 </div>
                 <div className="price-summary price-summary--pro">
                     <h3>Professional</h3>
-                    <p className="summary-price">
-                        Free<span>introductory offer</span>
-                    </p>
+                    <p className="summary-price">Coming soon</p>
                     <p>
-                        Everything in Community, plus projects, RAG, automation, and more creative
-                        tools.
+                        Planned: everything in Community, plus projects, RAG, automation, and more
+                        creative tools.
                     </p>
-                    <Link to="/plans" className="studio-button studio-button--paper">
-                        Explore Professional <TextArrow />
-                    </Link>
                 </div>
             </Reveal>
         </section>
