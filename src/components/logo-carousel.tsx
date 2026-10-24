@@ -1,55 +1,36 @@
-'use client';
-
-import { SUPPORTED_PROVIDERS } from '@site/src/constants/constants';
-import { motion } from 'framer-motion';
-
-const DURATION_PER_PROVIDER = 4; // seconds each provider adds to the scroll duration
+import { SUPPORTED_PROVIDERS } from '../constants/constants';
+import { Reveal } from './marketing-ui';
 
 export function LogoCarousel() {
-    const duration = SUPPORTED_PROVIDERS.length * DURATION_PER_PROVIDER;
     return (
-        <section className="overflow-hidden border-y border-white/5 bg-white/5 py-15">
-            <div className="container mx-auto !mb-8 px-4 text-center">
-                <p className="text-muted-foreground text-sm font-medium">
-                    Powering your workflow with top-tier models
-                </p>
-            </div>
-
-            <div className="mask-image-linear-gradient flex overflow-hidden">
-                <motion.div
-                    className="flex items-center gap-16 pr-16"
-                    animate={{ x: '-50%' }}
-                    transition={{
-                        duration,
-                        ease: 'linear',
-                        repeat: Infinity,
-                    }}
-                >
-                    {[
-                        ...SUPPORTED_PROVIDERS,
-                        ...SUPPORTED_PROVIDERS,
-                        ...SUPPORTED_PROVIDERS,
-                        ...SUPPORTED_PROVIDERS,
-                    ].map((provider, index) => (
+        <section className="providers-section" aria-labelledby="providers-title">
+            <Reveal className="providers-heading">
+                <h2 id="providers-title">Your models, together.</h2>
+                <p>Connect the providers you use. Keep the workspace you love.</p>
+            </Reveal>
+            <div className="provider-marquee">
+                <div className="provider-track">
+                    {[0, 1].map((copy) => (
                         <div
-                            key={`${provider.id}-${index}`}
-                            className="flex min-w-max cursor-pointer items-center gap-3 opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 hover:dark:filter-none"
+                            className="provider-run"
+                            key={copy}
+                            aria-hidden={copy === 1 ? true : undefined}
                         >
-                            <img
-                                src={provider.logo}
-                                alt={provider.name}
-                                className="logo-carousel-img h-10 w-10 object-contain"
-                                onError={(e) => {
-                                    (e.target as HTMLImageElement).style.display = 'none';
-                                }}
-                            />
-
-                            <span className="text-3xl font-semibold tracking-tight">
-                                {provider.name}
-                            </span>
+                            {SUPPORTED_PROVIDERS.map((provider) => (
+                                <div className="provider-wordmark" key={provider.id}>
+                                    <img
+                                        src={provider.logo}
+                                        width="28"
+                                        height="28"
+                                        loading="lazy"
+                                        alt=""
+                                    />
+                                    <span>{provider.name}</span>
+                                </div>
+                            ))}
                         </div>
                     ))}
-                </motion.div>
+                </div>
             </div>
         </section>
     );

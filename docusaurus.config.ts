@@ -139,6 +139,13 @@ const config: Config = {
             },
             items: [
                 {
+                    to: '/#features',
+                    label: 'Features',
+                    position: 'left',
+                    activeBaseRegex: '^/$',
+                },
+                { to: '/plans', label: 'Plans', position: 'left' },
+                {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
                     position: 'left',
@@ -158,6 +165,10 @@ const config: Config = {
                 {
                     title: 'Product',
                     items: [
+                        {
+                            label: 'Plans',
+                            to: '/plans',
+                        },
                         {
                             label: 'Features',
                             to: '/#features',

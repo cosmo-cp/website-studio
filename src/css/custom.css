@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './marketing.css';
 
 :root {
     --background: oklch(0.99 0 0 / 1);
@@ -249,11 +250,6 @@ body {
     text-decoration: none;
     color: var(--foreground);
     background-color: var(--accent);
-}
-
-.navbar__logo {
-    background-color: white;
-    border-radius: 50%;
 }
 
 /* Mobile Sidebar Styling */

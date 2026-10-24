@@ -5,6 +5,7 @@ Welcome to the official repository for the **Cosmo Studio** web platform. This p
 ## 🚀 About Cosmo Studio
 
 **Cosmo Studio** is your "All-in-One AI Command Center." It's a native application that allows you to chat with multiple AI models (GPT, Claude, local Ollama models) in one place.
+
 - **Privacy First**: Bring your own API keys and own your data.
 - **Native Experience**: Fast, responsive, and cross-platform (macOS, Windows, Linux).
 - **Extensible**: Supports a wide range of AI providers.
@@ -32,15 +33,16 @@ To run this project locally, follow these simple steps:
 ### Installation
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Cosmo-CP/website-studio.git
-   cd website-studio
-   ```
+
+    ```bash
+    git clone https://github.com/Cosmo-CP/website-studio.git
+    cd website-studio
+    ```
 
 2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 ### Local Development
 
@@ -55,14 +57,32 @@ Once started, the site will be available at `http://localhost:3000`. Docusaurus 
 ## 📂 Project Structure
 
 - `src/`: Contains React components, pages, and custom styles.
-  - `components/`: Reusable UI elements like Hero, Stats, and FAQ sections.
-  - `pages/`: The main landing page (`index.tsx`).
+    - `components/`: Reusable UI elements like Hero, Stats, and FAQ sections.
+    - `pages/`: The main landing page (`index.tsx`).
 - `docs/`: Markdown files for the product documentation.
 - `blog/`: Weekly updates and articles.
 - `static/`: Assets like images, icons, and logos.
 - `docusaurus.config.ts`: The main configuration file for the site.
 
 ## 📦 Build & Deployment
+
+### Marketing pages
+
+The home and plans pages share the scoped design tokens and responsive layouts in
+[`src/css/marketing.css`](./src/css/marketing.css). The marketing palette supports both
+site themes without changing documentation styles. Bricolage Grotesque is self-hosted
+in `static/fonts/` with its SIL Open Font License.
+
+Plan features and the provider directory are maintained in
+[`src/constants/plans.ts`](./src/constants/plans.ts); download URLs and the release
+version continue to come from `docusaurus.config.ts`. The hero is an interactive,
+illustrative preview, not a live model connection or a release screenshot. Motion
+respects reduced-motion preferences, and content remains readable without JavaScript.
+
+Validate marketing changes with `npm run typecheck`, `npm run build`, and a browser
+smoke test of both pages at desktop, tablet, and phone widths. Check the cloud/local
+preview, platform downloads, plan pricing-period switch, provider directory, FAQ,
+mobile navigation, and light/dark themes.
 
 To build the project for production:
 
@@ -71,6 +91,20 @@ npm run build
 ```
 
 This generates a `build/` directory with static files ready to be served.
+
+### Analytics
+
+Production builds load GA4 with measurement ID `G-709QB49B8G` and track page views on initial load and client-side navigation. To use another property for a preview or staging deployment, set `GA4_MEASUREMENT_ID` in its build environment:
+
+```bash
+GA4_MEASUREMENT_ID=G-XXXXXXXXXX npm run build
+```
+
+The ID is read when Docusaurus builds the site, not when a visitor opens it. Configure the same variable in your deployment provider's build settings for a persistent override. Docusaurus does not load `.env` files automatically, and its gtag plugin does not run during `npm start`. Do not add a second gtag script alongside the plugin.
+
+`npm start` keeps generated development files in `.docusaurus/dev`, separate from production builds in `.docusaurus`. This prevents a concurrent build from injecting production-only analytics route hooks into the development server, where `window.gtag` is intentionally unavailable. If an existing development session reports `window.gtag is not a function`, stop it, restart with `npm start`, and reload the browser. Use `npm run build` followed by `npm run serve` to test production analytics.
+
+For one page view per client-side navigation, check your GA4 web stream's Enhanced Measurement settings. If "Page changes based on browser history events" is enabled, turn that option off: the Docusaurus plugin sends its own navigation page views. Keep regular page-load tracking enabled, and verify both cases in GA4 Realtime after deployment.
 
 ## 🔗 Useful Links
 
