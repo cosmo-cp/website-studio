@@ -91,11 +91,7 @@ export function HeroSection() {
                 <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] [background-size:16px_16px] opacity-[0.15] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] dark:opacity-20" />
             </div>
             <div className="relative z-10 container mx-auto px-4">
-                <div className="mx-auto flex max-w-4xl flex-col items-center text-center"
-                     onClick={() => {
-                         track(`test`);
-                     }}
-                >
+                <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
