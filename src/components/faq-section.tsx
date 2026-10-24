@@ -1,4 +1,5 @@
 import { FAQS } from '@site/src/constants/constants';
+import Link from '@docusaurus/Link';
 import {
     Accordion,
     AccordionContent,
@@ -28,6 +29,9 @@ export function FaqSection() {
                     <p className="text-muted-foreground">
                         Everything you need to know about Cosmo Studio
                     </p>
+                    <Link to="/docs/faq" className="mt-3 inline-block font-medium">
+                        Read the full FAQ on Cosmo Studio and LLMs
+                    </Link>
                 </motion.div>
 
                 <motion.div

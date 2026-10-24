@@ -72,6 +72,18 @@ npm run build
 
 This generates a `build/` directory with static files ready to be served.
 
+### Analytics
+
+Production builds load GA4 with measurement ID `G-709QB49B8G` and track page views on initial load and client-side navigation. To use another property for a preview or staging deployment, set `GA4_MEASUREMENT_ID` in its build environment:
+
+```bash
+GA4_MEASUREMENT_ID=G-XXXXXXXXXX npm run build
+```
+
+The ID is read when Docusaurus builds the site, not when a visitor opens it. Configure the same variable in your deployment provider's build settings for a persistent override. Docusaurus does not load `.env` files automatically, and its gtag plugin does not run during `npm start`. Do not add a second gtag script alongside the plugin.
+
+For one page view per client-side navigation, check your GA4 web stream's Enhanced Measurement settings. If "Page changes based on browser history events" is enabled, turn that option off: the Docusaurus plugin sends its own navigation page views. Keep regular page-load tracking enabled, and verify both cases in GA4 Realtime after deployment.
+
 ## 🔗 Useful Links
 
 - **Main Website**: [cosmocp.com](https://cosmocp.com)

@@ -1,6 +1,7 @@
 ---
 slug: how-to-get-gemini-api-key
 title: How to Get Your Gemini API Key - A Complete Guide
+description: Create a Gemini API key in Google AI Studio, keep it secure, and connect a Gemini model to Cosmo Studio with this step-by-step guide.
 authors: Admin
 tags: [tutorial, gemini, api, setup]
 ---
@@ -115,7 +116,7 @@ Now that you have your Gemini API key, it's time to integrate it into your appli
 
 3. Select **Google** from the list of available providers
 4. Paste your Gemini API key into the designated field
-5. Select the Gemini models you want to use (e.g., `gemini-pro`, `gemini-pro-vision`)
+5. Choose a Gemini model currently available for your account; model names and access can change.
 6. Click **"Next"** or **"Save"** to complete the setup
 
 That's it! You're now ready to start using the Gemini API in your application.
@@ -159,5 +160,7 @@ Now that you have your Gemini API key set up, you can:
 Getting your Gemini API key is the first step toward building powerful AI-driven applications. With Google's robust infrastructure and cutting-edge models, the possibilities are endless.
 
 If you found this guide helpful, consider sharing it with others who might benefit. And if you're using **Cosmo Studio**, you now have everything you need to connect to Google's Gemini models and start chatting with AI!
+
+Continue with [your first chat in Cosmo Studio](/docs/getting-started), or see [answers about API billing, local models, and privacy](/docs/faq).
 
 Happy building! 🚀
