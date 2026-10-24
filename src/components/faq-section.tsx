@@ -1,58 +1,63 @@
-import { useState } from 'react';
+import { FAQS } from '@site/src/constants/constants';
 import Link from '@docusaurus/Link';
-import { Plus, Minus } from 'lucide-react';
-import { FAQS } from '../constants/constants';
-import { Reveal, TextArrow } from './marketing-ui';
-import { cn } from '../lib/utils';
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from '@site/src/components/ui/accordion';
+import { motion } from 'framer-motion';
 
 export function FaqSection() {
     const [selected, setSelected] = useState(0);
     return (
-        <section id="faq" className="faq-section" aria-labelledby="faq-title">
-            <Reveal className="section-heading">
-                <h2 id="faq-title">Good questions.</h2>
-                <Link to="/docs/faq" className="studio-text-link">
-                    Read the full FAQ <TextArrow />
-                </Link>
-            </Reveal>
-            <div className="faq-layout">
-                <div className="faq-questions">
-                    {FAQS.map((faq, index) => (
-                        <Reveal key={faq.question} delay={index * 0.06}>
-                            <div className={cn('faq-item', selected === index && 'is-selected')}>
-                                <button
-                                    type="button"
-                                    aria-expanded={selected === index}
-                                    aria-controls={`faq-answer-${index}`}
-                                    id={`faq-question-${index}`}
-                                    onClick={() => setSelected(selected === index ? -1 : index)}
-                                >
-                                    <span>{faq.question}</span>
-                                    {selected === index ? <Minus size={18} /> : <Plus size={18} />}
-                                </button>
-                                <div
-                                    id={`faq-answer-${index}`}
-                                    role="region"
-                                    aria-labelledby={`faq-question-${index}`}
-                                    hidden={selected !== index}
-                                    className="faq-inline-answer"
-                                >
-                                    <p>{faq.answer}</p>
-                                </div>
-                            </div>
-                        </Reveal>
-                    ))}
-                </div>
-                <Reveal className="faq-answer-panel">
-                    <div aria-hidden="true">
-                        <p key={selected}>
-                            {selected >= 0
-                                ? FAQS[selected].answer
-                                : 'Choose a question. Get a straight answer.'}
-                        </p>
-                        <span>Less mystery. More control.</span>
-                    </div>
-                </Reveal>
+        <section id="faq" className="relative overflow-hidden py-24">
+            <div className="pointer-events-none absolute inset-0 z-0">
+                <div className="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] [background-size:16px_16px] opacity-[0.05] dark:bg-[radial-gradient(#ffffff_1px,transparent_1px)] dark:opacity-[0.05]" />
+            </div>
+
+            <div className="relative z-10 container mx-auto max-w-3xl px-4">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    className="mb-12 text-center"
+                >
+                    <h2 className="!mb-4 !text-3xl font-bold md:!text-4xl">
+                        Frequently Asked Questions
+                    </h2>
+                    <p className="text-muted-foreground">
+                        Everything you need to know about Cosmo Studio
+                    </p>
+                    <Link to="/docs/faq" className="mt-3 inline-block font-medium">
+                        Read the full FAQ on Cosmo Studio and LLMs
+                    </Link>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {FAQS.map((faq, index) => (
+                            <AccordionItem
+                                key={index}
+                                value={`item-${index}`}
+                                className="border-border/50 bg-card/50 rounded-lg border px-6 backdrop-blur-sm"
+                            >
+                                <AccordionTrigger className="py-6 text-left text-lg font-medium hover:no-underline">
+                                    {faq.question}
+                                </AccordionTrigger>
+                                <AccordionContent className="text-muted-foreground pb-6 text-base leading-relaxed">
+                                    {faq.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </motion.div>
             </div>
         </section>
     );

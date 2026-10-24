@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Head from '@docusaurus/Head';
 import { HeroSection } from '@site/src/components/hero-section';
 import { LogoCarousel } from '@site/src/components/logo-carousel';
 import { AboutSection } from '@site/src/components/about-section';
@@ -10,7 +10,41 @@ import { CTASection } from '@site/src/components/cta-section';
 import Layout from '@theme/Layout';
 
 export default function Home(): ReactNode {
-    const { siteConfig } = useDocusaurusContext();
+    const structuredData = {
+        '@context': 'https://schema.org',
+        '@graph': [
+            {
+                '@type': 'Organization',
+                '@id': 'https://cosmocp.com/#organization',
+                name: 'Cosmo Studio',
+                url: 'https://cosmocp.com/',
+                logo: 'https://cosmocp.com/img/android-chrome-512x512.png',
+                email: 'support@cosmocp.com',
+                sameAs: [
+                    'https://github.com/cosmo-cp/cosmo-studio',
+                    'https://x.com/cosmocp',
+                    'https://www.linkedin.com/company/cosmo-studio-in',
+                ],
+            },
+            {
+                '@type': 'WebSite',
+                '@id': 'https://cosmocp.com/#website',
+                name: 'Cosmo Studio',
+                url: 'https://cosmocp.com/',
+                inLanguage: 'en',
+                publisher: { '@id': 'https://cosmocp.com/#organization' },
+            },
+            {
+                '@type': 'SoftwareApplication',
+                name: 'Cosmo Studio',
+                url: 'https://cosmocp.com/',
+                applicationCategory: 'ProductivityApplication',
+                operatingSystem: 'macOS, Windows, Linux',
+                description: 'A local-first desktop app for chatting with multiple AI providers.',
+                publisher: { '@id': 'https://cosmocp.com/#organization' },
+            },
+        ],
+    };
     return (
         <Layout
             title="Local-First AI Chat for GPT, Claude & Ollama"
@@ -21,7 +55,8 @@ export default function Home(): ReactNode {
                     {JSON.stringify(structuredData).replace(/</g, '\\u003c')}
                 </script>
             </Head>
-            <main className="marketing-page">
+            <main className="landing-wrapper">
+                {/* High Impact Hero with Download Buttons */}
                 <HeroSection />
                 <LogoCarousel />
                 <AboutSection />

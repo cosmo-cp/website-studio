@@ -1,13 +1,14 @@
 ---
 slug: how-to-get-openai-api-key
 title: How to Get Your OpenAI API Key - A Complete Guide
+description: Create an OpenAI API key, check billing, keep the key secure, and connect OpenAI models in Cosmo Studio with this step-by-step guide.
 authors: Admin
 tags: [tutorial, openai, api, setup]
 ---
 
 # 🔑 **How to Get Your OpenAI API Key - A Complete Guide**
 
-Getting started with OpenAI's API is the gateway to using powerful models like GPT-5/x and o1/x. Whether you're building an AI application or using a tool like Cosmo Studio, obtainining your API key is a simple process. In this guide, we'll walk you through the exact steps to get your OpenAI API key.
+An OpenAI API key lets you connect supported OpenAI models to Cosmo Studio or your own applications. This guide covers how to create a key, check billing, and use it safely without sharing it publicly.
 
 ---
 
@@ -90,7 +91,7 @@ If you're using **Cosmo Studio** to interact with AI, here's how to plug in your
 2. Click on **"Add Provider"**.
 3. Select **OpenAI** from the list.
 4. Paste your secret key into the API Key field.
-5. Select the models you'd like to use (e.g., `gpt-4o`, `o1-preview`).
+5. Select a model currently available to your account; names and access can change.
 6. Click **Save**.
 
 Now you're ready to chat with OpenAI's most powerful models!
@@ -121,3 +122,5 @@ To keep your account safe:
 Obtaining your OpenAI API key is a quick process that unlocks a world of AI possibilities. By following these steps, you've taken the first step toward building or using next-generation AI tools.
 
 If you found this guide helpful, check out our other tutorials on the blog. Happy building! 🚀
+
+Next, [start a chat in Cosmo Studio](/docs/getting-started), read the [LLM and API key FAQ](/docs/faq), or follow the [Gemini API key guide](/blog/how-to-get-gemini-api-key).
