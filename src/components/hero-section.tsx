@@ -133,14 +133,14 @@ export function HeroSection() {
                     >
                         <div className="relative flex items-center">
                             <Button
+                                onClick={() => {
+                                    track(`Download button clicked for ${os}`);
+                                }}
                                 size="lg"
                                 className="border-primary-foreground/20 h-12 min-w-[200px] gap-2 rounded-r-none border-r px-8 text-base"
                                 asChild
                             >
                                 <a
-                                    onClick={() => {
-                                        track(`Download button clicked for ${os}`);
-                                    }}
                                     href={downloadOptions[os].href}
                                     className="!text-primary-foreground [color:inherit] !no-underline"
                                     rel="nofollow noopener noreferrer"
