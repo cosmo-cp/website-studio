@@ -109,6 +109,6 @@ Add, edit, and remove providers with simple configuration flows. Keep keys organ
 
 Run the same experience on Windows, macOS, and Linux with consistent behavior across all supported platforms.
 
-## Multimodal input 🖼️
+<!-- ## Multimodal input 🖼️
 
-Support for image-based prompts in chat for vision-capable models.
+Support for image-based prompts in chat for vision-capable models. -->

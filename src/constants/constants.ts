@@ -27,35 +27,35 @@ export const FEATURES_LIVE = [
         description:
             'OpenAI, Anthropic, Gemini, xAI, Groq, Mistral, DeepSeek, Perplexity, Cohere, LM Studio, HuggingFace, Ollama & more.',
         icon: 'Cpu',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
     {
-        title: 'Personas',
+        title: 'Agent Client Protocol(ACP)',
         description:
-            'Create custom AI personas with unique system prompts and personalities tailored to your workflow.',
-        icon: 'Key',
-        badges: ['New in v1.1.2'],
+            'Install compatible local agents from the ACP registry and chat with them in a dedicated workspace.',
+        icon: 'Bot',
+        badges: ['New in v1.1.4'],
     },
     {
         title: 'MCP Servers',
         description:
             'Connect Model Context Protocol servers to supercharge your AI with external tools and live data.',
         icon: 'Monitor',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
     {
         title: 'Slash Commands',
         description:
             'Trigger powerful actions instantly with built-in slash commands right in your chat input.',
         icon: 'MessageSquare',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
     {
         title: 'Thinking & Token Insights',
         description:
             'Watch the model think in real-time, track token usage per message, and stop streaming anytime.',
         icon: 'Cpu',
-        badges: ['New in v1.1.2'],
+        badges: ['Live'],
     },
 ];
 
@@ -70,12 +70,6 @@ export const FEATURES_ROADMAP = [
         title: 'Workflow',
         description:
             'Build complex automation workflows and multi-step processes with a visual drag-and-drop builder.',
-        status: 'coming',
-    },
-    {
-        title: 'Agent Mode',
-        description:
-            'Automate multi-step tasks with intelligent, goal-driven agents that work on your behalf.',
         status: 'coming',
     },
     {
@@ -94,15 +88,15 @@ export const FEATURES_ROADMAP = [
 export const FAQS = [
     {
         question: 'Is my data private?',
-        answer: 'Yes. Cosmo Studio is a local-first application. Your chats are stored on your device, and API requests go directly to the providers (OpenAI, Anthropic, etc.). We never see your messages.',
+        answer: 'Chats are stored on your device. When you use a cloud model, your prompt is sent to the provider you selected under its own privacy policy; local models can run on your machine.',
     },
     {
         question: 'Do I need to pay for API keys?',
-        answer: 'You need your own API keys for cloud providers like OpenAI, Anthropic, or xAI. However, you can use local models via Ollama or LM Studio completely free.',
+        answer: 'Cloud providers may charge for API usage separately from Cosmo Studio. Running a model with Ollama or LM Studio avoids cloud API fees but uses your own hardware.',
     },
     {
-        question: 'What providers are supported in v1.1.2?',
-        answer: 'Cosmo Studio v1.1.2 supports OpenAI, Anthropic, Google Gemini, xAI (Grok), Groq, Mistral, Moonshot, DeepSeek, Perplexity, Cohere, LM Studio, HuggingFace, and Ollama — 13+ providers in total.',
+        question: 'Which AI providers can I use?',
+        answer: 'Connect providers such as OpenAI, Anthropic, Gemini, Groq, and DeepSeek, or run supported local models through Ollama or LM Studio. Choose a model when you start a chat.',
     },
     {
         question: 'Is there a mobile app?',
@@ -110,6 +104,6 @@ export const FAQS = [
     },
     {
         question: 'Can I sync my chats across devices?',
-        answer: 'Syncing is coming soon. We are working on an encrypted sync solution to keep your data private while accessible everywhere.',
+        answer: 'Not currently. Your chat history is stored locally on each device; do not rely on cross-device sync for backups or access to past chats.',
     },
 ];

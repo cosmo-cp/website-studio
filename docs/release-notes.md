@@ -9,6 +9,7 @@ sidebar_position: 7
 - **ACP Agents**: Install supported agents from the ACP registry, test agent connections, and use agents in chat with a selected workspace.
 - **Settings and Chat**: Organized agent and feature configuration under Settings and refactored chat history and state handling.
 - **Release documentation**: [ACP agent usage](./features.md#agent-client-protocol-acp-)
+- **Full Release Blog Post**: [Read more here](/blog/release-1-1-4)
 
 ---
 

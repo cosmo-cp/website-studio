@@ -4,7 +4,9 @@ import { lazy, Suspense, useEffect, useMemo, useState } from 'react';
 import { Button } from './ui/button';
 import { motion } from 'framer-motion';
 import { Apple, ChevronDown, Monitor, Terminal } from 'lucide-react';
+
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import {track} from "@vercel/analytics";
 const Hero3DCard = lazy(() =>
     import('./hero/hero-chat-mockup').then((module) => ({ default: module.Hero3DCard }))
 );
@@ -107,7 +109,7 @@ export function HeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="from-foreground to-foreground/70 mb-6 bg-gradient-to-b bg-clip-text !text-4xl font-bold tracking-tight text-transparent md:!text-7xl"
+                        className="from-foreground to-foreground/70 mb-6 bg-gradient-to-b bg-clip-text font-bold tracking-tight text-transparent"
                     >
                         Your All-in-One <br />
                         <span className="text-primary">AI Command Center</span>
