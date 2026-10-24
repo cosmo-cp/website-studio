@@ -1,263 +1,253 @@
-import type { ReactNode } from 'react';
+import { useState, type ReactNode } from 'react';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import { Check, Download, Sparkles } from 'lucide-react';
-
-const aiSdkProviders = {
-    builtIn: [
-        'xAI Grok',
-        'OpenAI',
-        'Azure OpenAI',
-        'Anthropic',
-        'Amazon Bedrock',
-        'Google',
-        'Google Vertex',
-        'Mistral',
-        'Together.ai',
-        'Cohere',
-        'Fireworks',
-        'DeepInfra',
-        'DeepSeek',
-        'Cerebras',
-        'Groq',
-        'Perplexity',
-        'ElevenLabs',
-        'Hume',
-        'Rev.ai',
-        'Deepgram',
-        'Gladia',
-        'AssemblyAI',
-        'Baseten',
-    ],
-    community: [
-        'Ollama',
-        'FriendliAI',
-        'Portkey',
-        'Cloudflare Workers AI',
-        'OpenRouter',
-        'Apertis',
-        'Aihubmix',
-        'Requesty',
-        'Crosshatch',
-        'Mixedbread',
-        'Voyage AI',
-        'Mem0',
-        'Letta',
-        'Hindsight',
-        'Supermemory',
-        'Spark',
-        'AnthropicVertex',
-        'LangDB',
-        'Dify',
-        'Sarvam',
-        'Claude Code',
-        'Browser AI',
-        'Gemini CLI',
-        'A2A',
-        'SAP AI Core',
-        'AI/ML API',
-        'MCP Sampling',
-        'ACP',
-        'OpenCode',
-        'Codex CLI',
-        'Soniox',
-        'Zhipu (Z.AI)',
-        'OLLM',
-        'ZeroEntropy',
-        'Crusoe',
-        'Neon AI Gateway',
-        'Interfaze',
-        'Telnyx',
-    ],
-};
-const providerCount = aiSdkProviders.builtIn.length + aiSdkProviders.community.length;
-
-const featureGroups = [
-    {
-        name: 'Community',
-        description: 'A great place to start with Cosmo Studio.',
-        price: 'Free',
-        detail: 'Free forever',
-        features: [
-            `${providerCount} model providers`,
-            'MCP',
-            'Tool Call',
-            'Agent Client Protocol',
-            'Chat',
-            'Command',
-            'Persona',
-        ],
-        featured: false,
-    },
-    {
-        name: 'Professional',
-        description: 'More room to do your best work.',
-        price: '$15',
-        detail: 'per year',
-        features: [
-            'Everything in Community',
-            'MCP Registry',
-            'Image Generation',
-            'RAG',
-            'Projects',
-            'Guardrails',
-            'Usage',
-            'Keyboard shortcuts',
-            'Automation',
-            'Audio Generation',
-            'Video Generation',
-        ],
-        featured: true,
-    },
-];
+import { ArrowDownRight, Check, Minus } from 'lucide-react';
+import {
+    COMMUNITY_FEATURES,
+    PROFESSIONAL_FEATURES,
+    PLAN_PROVIDER_COUNT,
+    PLAN_PROVIDERS,
+} from '../constants/plans';
+import { DownloadButton, Reveal, TextArrow } from '../components/marketing-ui';
+import { FaqSection } from '../components/faq-section';
+import { CTASection } from '../components/cta-section';
 
 export default function PlansPage(): ReactNode {
-    const { siteConfig } = useDocusaurusContext();
-    const downloadLinks = siteConfig.customFields?.downloadLinks as {
-        mac: string;
-        windows: string;
-        linux: string;
-    };
-
+    const [billing, setBilling] = useState<'annual' | 'monthly'>('annual');
     return (
         <Layout
             title="Desktop AI Plans and Features"
             description="Compare Cosmo Studio Community and Professional plans, included AI features, and download options for macOS, Windows, and Linux."
         >
-            <main className="relative isolate min-h-[calc(100vh-4.5rem)] overflow-hidden px-6 py-20 md:py-28">
-                <div className="from-primary/20 via-background to-background pointer-events-none absolute inset-x-0 top-0 -z-10 mx-auto h-[32rem] max-w-5xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]" />
-                <div className="mx-auto max-w-6xl">
-                    <header className="mx-auto mb-14 max-w-2xl text-center md:mb-20">
-                        <p className="text-primary mb-4 text-sm font-semibold tracking-[0.2em] uppercase">
-                            Simple plans, more possibilities
-                        </p>
-                        <h1 className="mb-5 text-4xl font-bold tracking-tight md:text-6xl">
-                            Find your Cosmo plan
+            <main className="marketing-page plans-page">
+                <header className="plans-intro">
+                    <Reveal>
+                        <h1>
+                            A plan for
+                            <br />
+                            your workflow.
                         </h1>
-                        <p className="text-muted-foreground text-lg leading-relaxed">
-                            Start with Community for free, or explore Professional with an
-                            introductory free offer.
+                    </Reveal>
+                    <Reveal delay={0.08}>
+                        <p>
+                            A free foundation for everyday thinking. More possibilities when you
+                            need them. Always your keys, always your workspace.
                         </p>
-                    </header>
-
-                    <div className="grid items-stretch gap-6 lg:grid-cols-2">
-                        {featureGroups.map((plan) => (
-                            <article
-                                key={plan.name}
-                                className="border-border bg-card relative flex flex-col rounded-3xl border p-7 shadow-xl shadow-black/[0.03] md:p-10"
+                        <a href="#comparison" className="studio-button studio-button--ink">
+                            See what’s included <ArrowDownRight size={19} />
+                        </a>
+                    </Reveal>
+                </header>
+                <section className="plans-board" aria-label="Choose a Cosmo Studio plan">
+                    <Reveal className="plan-tile">
+                        <div className="plan-name">
+                            <h2>Community</h2>
+                            <span>For your everyday AI.</span>
+                        </div>
+                        <div className="plan-price">
+                            Free<span>Forever. Not a trial.</span>
+                        </div>
+                        <p>
+                            Your essential workspace for cloud models, local AI, tools, and agents.
+                        </p>
+                        <ul className="plan-highlights">
+                            {[
+                                `${PLAN_PROVIDER_COUNT} model providers`,
+                                'Bring your own API keys',
+                                'Local models with Ollama & LM Studio',
+                                'MCP tools & ACP agents',
+                                'Chat, commands & personas',
+                            ].map((feature) => (
+                                <li key={feature}>
+                                    <Check size={17} aria-hidden="true" />
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
+                        <DownloadButton compact />
+                        <p className="plan-platforms">macOS, Windows &amp; Linux</p>
+                    </Reveal>
+                    <Reveal className="plan-tile plan-tile--pro" delay={0.08}>
+                        <div className="plan-name">
+                            <h2>Professional</h2>
+                            <span>For a more connected workflow.</span>
+                        </div>
+                        <div className="plan-price">
+                            Free<span>Introductory offer</span>
+                        </div>
+                        <div className="billing-row">
+                            <p>
+                                Regular price{' '}
+                                <s>{billing === 'annual' ? '$15 / year' : '$2 / month'}</s>
+                            </p>
+                            <div
+                                className="billing-switch"
+                                role="group"
+                                aria-label="Reference pricing period"
                             >
-                                <div className="mb-5 flex h-9 items-center">
-                                    {plan.featured && (
-                                        <div className="rounded-full border border-white/20 bg-[linear-gradient(90deg,#ef4444_0%,#f97316_20%,#eab308_40%,#22c55e_60%,#3b82f6_80%,#a855f7_100%)] px-4 py-2 text-sm font-bold text-white shadow-sm">
-                                            <span className="flex items-center gap-1.5">
-                                                <Sparkles className="h-4 w-4" />
-                                                Intro offer: FREE
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-                                <div>
-                                    <p className="text-primary mb-2 text-xl font-semibold tracking-wide uppercase md:text-2xl">
-                                        {plan.name}
-                                    </p>
-                                    <h2 className="mb-2 min-h-16 text-2xl font-bold md:text-3xl">
-                                        {plan.description}
-                                    </h2>
-                                    {plan.featured ? (
-                                        <div className="mt-8 flex h-[4.5rem] flex-wrap items-center gap-4">
-                                            <div className="space-y-1">
-                                                <p className="text-muted-foreground text-sm">
-                                                    <span className="text-2xl font-semibold line-through decoration-2">
-                                                        {plan.price}
-                                                    </span>{' '}
-                                                    <span>{plan.detail}</span>
-                                                </p>
-                                                <p className="text-muted-foreground text-sm">
-                                                    <span className="text-lg font-semibold line-through decoration-2">
-                                                        $2
-                                                    </span>{' '}
-                                                    per month
-                                                </p>
-                                            </div>
-                                            <div className="bg-primary/10 text-primary rounded-2xl px-5 py-3 text-3xl font-extrabold tracking-tight">
-                                                FREE
-                                            </div>
-                                        </div>
-                                    ) : (
-                                        <div className="mt-8 flex h-[4.5rem] flex-wrap items-baseline gap-x-2 gap-y-1">
-                                            <span className="text-5xl font-bold tracking-tight md:text-6xl">
-                                                {plan.price}
-                                            </span>
-                                            <span className="text-muted-foreground">
-                                                {plan.detail}
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-
-                                <div className="border-border my-8 border-t" />
-
-                                <div className="flex flex-1 flex-col">
-                                    <h3 className="mb-12 text-sm font-semibold tracking-wider uppercase">
-                                        Features
-                                    </h3>
-                                    <ul className="mt-6 min-h-44 flex-1 space-y-4">
-                                        {plan.features.map((feature) => (
-                                            <li
-                                                key={feature}
-                                                className="text-muted-foreground flex items-start gap-3"
-                                            >
-                                                <span className="bg-primary/10 text-primary mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full">
-                                                    <Check className="h-3.5 w-3.5" />
-                                                </span>
-                                                <span>
-                                                    {plan.name === 'Community' &&
-                                                    feature ===
-                                                        `${providerCount} model providers` ? (
-                                                        <Link>{feature}</Link>
-                                                    ) : (
-                                                        feature
-                                                    )}
-                                                </span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                    <div className="border-border bg-muted/40 text-muted-foreground mt-6 flex min-h-12 items-center rounded-xl border border-dashed px-4 py-3 text-sm">
-                                        More plan features coming soon.
-                                    </div>
-                                </div>
-
-                                <div className="mt-9">
-                                    <a
-                                        href={downloadLinks.mac}
-                                        className="bg-primary hover:bg-primary/90 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl px-6 font-semibold !text-white no-underline transition-colors"
-                                    >
-                                        <Download className="h-4 w-4" />
-                                        Download Cosmo Studio {plan.featured ? 'Professional' : ''}
-                                    </a>
-                                    <p className="text-muted-foreground mt-3 text-center text-xs">
-                                        Also available for{' '}
-                                        <a
-                                            className="underline underline-offset-4"
-                                            href={downloadLinks.windows}
-                                        >
-                                            Windows
-                                        </a>{' '}
-                                        and{' '}
-                                        <a
-                                            className="underline underline-offset-4"
-                                            href={downloadLinks.linux}
-                                        >
-                                            Linux
-                                        </a>
-                                    </p>
-                                </div>
-                            </article>
+                                <button
+                                    aria-pressed={billing === 'annual'}
+                                    onClick={() => setBilling('annual')}
+                                >
+                                    Yearly
+                                </button>
+                                <button
+                                    aria-pressed={billing === 'monthly'}
+                                    onClick={() => setBilling('monthly')}
+                                >
+                                    Monthly
+                                </button>
+                            </div>
+                        </div>
+                        <p>
+                            Everything in Community, with more ways to create, organise, and
+                            automate.
+                        </p>
+                        <ul className="plan-highlights">
+                            {[
+                                'Projects, RAG & guardrails',
+                                'MCP Registry & automation',
+                                'Image, audio & video generation',
+                                'Usage insights & keyboard shortcuts',
+                            ].map((feature) => (
+                                <li key={feature}>
+                                    <Check size={17} aria-hidden="true" />
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
+                        <DownloadButton compact />
+                        <p className="plan-platforms">Same app. More possibilities.</p>
+                    </Reveal>
+                    <Reveal className="plan-fine-print">
+                        <p>
+                            <strong>A note on model costs.</strong> Cosmo Studio plans don’t include
+                            cloud API credits. Your provider bills usage separately. Local models
+                            use your own hardware.
+                        </p>
+                        <Link to="/docs/faq" className="studio-text-link">
+                            How API billing works <TextArrow />
+                        </Link>
+                    </Reveal>
+                </section>
+                <section
+                    id="comparison"
+                    className="comparison-section"
+                    aria-labelledby="comparison-title"
+                >
+                    <Reveal className="section-heading">
+                        <h2 id="comparison-title">The full picture.</h2>
+                        <p>Find the tools that fit the way you work.</p>
+                    </Reveal>
+                    <Reveal>
+                        <div
+                            className="comparison-scroll"
+                            tabIndex={0}
+                            role="region"
+                            aria-label="Plan feature comparison"
+                        >
+                            <table className="plan-comparison">
+                                <caption className="sr-only">
+                                    Features included in Community and Professional
+                                </caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Your workspace</th>
+                                        <th scope="col">Community</th>
+                                        <th scope="col">Professional</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Model providers</th>
+                                        <td>
+                                            <a href="#provider-directory">
+                                                {PLAN_PROVIDER_COUNT} providers
+                                            </a>
+                                        </td>
+                                        <td>{PLAN_PROVIDER_COUNT} providers</td>
+                                    </tr>
+                                    {COMMUNITY_FEATURES.map((feature) => (
+                                        <tr key={feature}>
+                                            <th scope="row">{feature}</th>
+                                            <td>
+                                                <Included />
+                                            </td>
+                                            <td>
+                                                <Included />
+                                            </td>
+                                        </tr>
+                                    ))}
+                                    {PROFESSIONAL_FEATURES.map((feature) => (
+                                        <tr key={feature}>
+                                            <th scope="row">{feature}</th>
+                                            <td>
+                                                <Minus size={18} aria-label="Not included" />
+                                            </td>
+                                            <td>
+                                                <Included />
+                                            </td>
+                                        </tr>
+                                    ))}
+                                </tbody>
+                            </table>
+                        </div>
+                    </Reveal>
+                </section>
+                <section
+                    id="provider-directory"
+                    className="provider-directory"
+                    aria-labelledby="directory-title"
+                >
+                    <Reveal className="directory-intro">
+                        <h2 id="directory-title">Find your provider.</h2>
+                        <p>
+                            The provider ecosystem behind your workspace. Available models and
+                            capabilities depend on the provider and your configuration.
+                        </p>
+                        <Link to="/docs/features" className="studio-text-link">
+                            Read the provider guide <TextArrow />
+                        </Link>
+                    </Reveal>
+                    <Reveal className="directory-lists" delay={0.08}>
+                        {Object.entries(PLAN_PROVIDERS).map(([group, providers]) => (
+                            <details key={group}>
+                                <summary>
+                                    {group === 'builtIn'
+                                        ? 'Built-in providers'
+                                        : 'Community providers'}
+                                    <span>
+                                        {providers.length} <PlusIndicator />
+                                    </span>
+                                </summary>
+                                <ul>
+                                    {providers.map((provider) => (
+                                        <li key={provider}>{provider}</li>
+                                    ))}
+                                </ul>
+                            </details>
                         ))}
-                    </div>
-                </div>
+                    </Reveal>
+                </section>
+                <FaqSection />
+                <CTASection />
             </main>
         </Layout>
+    );
+}
+
+function Included() {
+    return (
+        <span className="included-value">
+            <Check size={17} aria-hidden="true" /> <span>Included</span>
+        </span>
+    );
+}
+
+function PlusIndicator() {
+    return (
+        <span aria-hidden="true" className="directory-plus">
+            +
+        </span>
     );
 }

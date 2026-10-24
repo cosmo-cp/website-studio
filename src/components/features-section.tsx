@@ -1,114 +1,125 @@
-import { FEATURES_LIVE, FEATURES_ROADMAP } from '@site/src/constants/constants';
-import { MessageSquare, Cpu, Key, Monitor, ArrowRight, Clock } from 'lucide-react';
-
-// Icon mapping
-const iconMap: Record<string, React.ElementType> = {
-    MessageSquare,
-    Cpu,
-    Key,
-    Monitor,
-};
+import Link from '@docusaurus/Link';
+import Heading from '@theme/Heading';
+import { ArrowUpRight, Check, ChevronRight, Plug, Terminal, Wrench } from 'lucide-react';
+import { FEATURES_ROADMAP } from '../constants/constants';
+import { Reveal, TextArrow } from './marketing-ui';
 
 export function FeaturesSection() {
     return (
-        <section id="features" className="bg-background py-24">
-            <div className="container mx-auto px-4">
-                <div className="mb-16 text-center">
-                    <h2 className="!mb-4 !text-3xl font-bold md:!text-4xl">
-                        Feature Rich, Future Ready
-                    </h2>
-                    <p className="text-muted-foreground mx-auto">
-                        Everything you need today, with a clear roadmap for tomorrow.
-                    </p>
-                </div>
-
-                <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-                    {/* Now Available */}
-                    <div>
-                        <div className="mb-8 flex items-center gap-3">
-                            <div className="h-2 w-2 animate-pulse rounded-full bg-green-500" />
-                            <h3 className="text-xl font-semibold">Now Available</h3>
+        <section className="features-section" aria-labelledby="features">
+            <Reveal className="section-heading">
+                <Heading as="h2" id="features">
+                    A wider workspace.
+                </Heading>
+                <p>A focused place to think, with the tools to take things further.</p>
+            </Reveal>
+            <div className="feature-board">
+                <Reveal className="feature-tile feature-tools">
+                    <div className="feature-copy">
+                        <h3>Give your AI more context.</h3>
+                        <p>
+                            Connect MCP servers so your model can work with external tools and live
+                            data, not just the words in your prompt.
+                        </p>
+                    </div>
+                    <div className="tools-fragment" data-ui>
+                        <div className="fragment-title">
+                            <Plug size={17} /> MCP connections
                         </div>
-
-                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                            {FEATURES_LIVE.map((feature, index) => {
-                                const Icon = iconMap[feature.icon] || MessageSquare;
-                                return (
-                                    <div
-                                        key={index}
-                                        className="bg-card border-border hover:border-primary/50 group rounded-xl border p-6 transition-all"
-                                    >
-                                        <div className="bg-primary/10 text-foreground mb-4 flex h-10 w-10 items-center justify-center rounded-lg transition-transform group-hover:scale-110">
-                                            <Icon className="h-5 w-5" />
-                                        </div>
-                                        <h4 className="mb-2 font-semibold">{feature.title}</h4>
-                                        <p className="text-muted-foreground mb-4 text-sm">
-                                            {feature.description}
-                                        </p>
-                                        <div className="flex flex-wrap gap-2">
-                                            {feature.badges.map((badge, i) => (
-                                                <span
-                                                    key={i}
-                                                    className="bg-secondary text-secondary-foreground rounded-full px-2 py-1 text-[10px] font-medium"
-                                                >
-                                                    {badge}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                        <div className="tool-row">
+                            <Wrench size={18} />
+                            <span>Tools from your servers</span>
+                            <Check size={16} />
+                        </div>
+                        <div className="tool-call">
+                            <span>Tool call</span>
+                            <strong>Read project context</strong>
+                            <p>Bring the right information into the conversation.</p>
+                            <span className="tool-result">
+                                <Check size={13} /> Context added to chat
+                            </span>
                         </div>
                     </div>
-
-                    {/* Roadmap */}
-                    <div>
-                        <div className="mb-8 flex items-center gap-3">
-                            <div className="h-2 w-2 rounded-full bg-blue-500" />
-                            <h3 className="text-xl font-semibold">Roadmap</h3>
+                </Reveal>
+                <Reveal className="feature-tile feature-agents" delay={0.08}>
+                    <div className="agent-fragment" data-ui>
+                        <div className="fragment-title">
+                            <Terminal size={17} /> Agent workspace
                         </div>
-
-                        <div className="space-y-4">
-                            {FEATURES_ROADMAP.map((feature, index) => (
-                                <div
-                                    key={index}
-                                    className="border-border/50 bg-muted/20 flex items-start gap-4 rounded-xl border p-4"
-                                >
-                                    <div className="mt-1">
-                                        {feature.status === 'beta' ? (
-                                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/10 text-blue-500">
-                                                <ArrowRight className="h-4 w-4" />
-                                            </div>
-                                        ) : (
-                                            <div className="bg-muted text-muted-foreground flex h-8 w-8 items-center justify-center rounded-full">
-                                                <Clock className="h-4 w-4" />
-                                            </div>
-                                        )}
-                                    </div>
-                                    <div className="flex-1">
-                                        <div className="mb-1 flex items-center justify-between">
-                                            <h4 className="font-medium">{feature.title}</h4>
-                                            {feature.status === 'beta' && (
-                                                <span className="rounded-full bg-blue-500/20 px-2 py-0.5 text-[10px] font-bold tracking-wide text-blue-500 uppercase">
-                                                    Beta
-                                                </span>
-                                            )}
-                                            {feature.status === 'coming' && (
-                                                <span className="bg-muted text-muted-foreground rounded-full px-2 py-0.5 text-[10px] font-bold tracking-wide whitespace-nowrap uppercase">
-                                                    Coming Soon
-                                                </span>
-                                            )}
-                                        </div>
-                                        <p className="text-muted-foreground text-sm">
-                                            {feature.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            ))}
+                        <div className="agent-message">
+                            <img src="/img/logo.svg" width="28" height="28" alt="" />
+                            <div>
+                                <strong>A space for your agents.</strong>
+                                <p>
+                                    Install from the ACP registry.
+                                    <br />
+                                    Start a dedicated conversation.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="agent-protocol">
+                            <span>Agent Client Protocol</span>
+                            <ArrowUpRight size={16} />
                         </div>
                     </div>
-                </div>
+                    <div className="feature-copy">
+                        <h3>Meet your local agents.</h3>
+                        <p>
+                            Install compatible ACP agents and give each one a dedicated workspace.
+                            Keep agent conversations right alongside your chats.
+                        </p>
+                    </div>
+                </Reveal>
+                <Reveal className="feature-tile feature-commands" delay={0.16}>
+                    <div className="feature-copy">
+                        <h3>Stay in the flow.</h3>
+                        <p>
+                            Reach for slash commands without leaving your conversation. See model
+                            thinking, track tokens per message, and stop a response whenever you
+                            need.
+                        </p>
+                    </div>
+                    <div className="commands-fragment" data-ui>
+                        <div className="command-input">
+                            <span>/</span> Commands <ChevronRight size={16} />
+                        </div>
+                        <div className="command-detail">
+                            <MessageInsight />
+                            <span>
+                                Thinking &amp; token insights
+                                <strong>Understand each response.</strong>
+                            </span>
+                        </div>
+                        <p>
+                            Markdown, code highlighting, and a workspace that gets out of your way.
+                        </p>
+                    </div>
+                </Reveal>
             </div>
+            <Reveal className="roadmap-row">
+                <div>
+                    <h3>Next on the horizon.</h3>
+                    <p>In development, not included today.</p>
+                </div>
+                <ul>
+                    {FEATURES_ROADMAP.map((feature) => (
+                        <li key={feature.title}>{feature.title}</li>
+                    ))}
+                </ul>
+                <Link to="/docs/features" className="studio-text-link">
+                    Explore all features <TextArrow />
+                </Link>
+            </Reveal>
         </section>
+    );
+}
+
+function MessageInsight() {
+    return (
+        <span className="insight-mark" aria-hidden="true">
+            <span />
+            <span />
+            <span />
+        </span>
     );
 }

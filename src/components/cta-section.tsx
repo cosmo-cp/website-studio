@@ -1,33 +1,35 @@
-import { Button } from './ui/button';
-import { Download } from 'lucide-react';
+import Link from '@docusaurus/Link';
+import { ArrowUpRight } from 'lucide-react';
+import { DownloadButton, Reveal } from './marketing-ui';
 
 export function CTASection() {
     return (
-        <section className="relative overflow-hidden py-24">
-            <div className="bg-primary/10 pointer-events-none absolute inset-0 -z-10" />
-            <div className="pointer-events-none absolute inset-0 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] bg-center" />
-
-            <div className="relative z-10 container mx-auto px-4 text-center">
-                <h2 className="!mb-6 !text-4xl font-bold tracking-tight md:!text-5xl">
-                    Ready to upgrade your workflow?
-                </h2>
-                <p className="text-muted-foreground mx-auto mb-10 text-xl">
-                    Join Cosmo Studio for a faster, more private AI experience.
-                </p>
-
-                <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
-                    <Button size="lg" className="h-14 gap-2 px-8 text-lg" asChild>
-                        <a
-                            href="#"
-                            className="!text-primary-foreground"
-                            rel="nofollow noopener noreferrer"
-                        >
-                            <Download className="h-5 w-5" />
-                            Download Cosmo Studio
-                        </a>
-                    </Button>
-                </div>
+        <section id="download" className="closing-section" aria-labelledby="download-title">
+            <div className="closing-wordmark" aria-hidden="true">
+                <span>Cosmo</span>
+                <span>Studio</span>
             </div>
+            <Reveal className="closing-main">
+                <div>
+                    <h2 id="download-title">
+                        Make room for
+                        <br />
+                        better work.
+                    </h2>
+                    <p>
+                        One desktop app. Your choice of AI.
+                        <br />A workspace that stays yours.
+                    </p>
+                </div>
+                <DownloadButton />
+            </Reveal>
+            <Reveal className="closing-aside" delay={0.08}>
+                <img src="/img/logo.svg" width="96" height="96" alt="" />
+                <Link to="/docs/getting-started">
+                    A good place to start.
+                    <ArrowUpRight size={22} aria-hidden="true" />
+                </Link>
+            </Reveal>
         </section>
     );
 }

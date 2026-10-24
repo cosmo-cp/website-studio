@@ -2,7 +2,6 @@ import type { ReactNode } from 'react';
 import Head from '@docusaurus/Head';
 import { HeroSection } from '@site/src/components/hero-section';
 import { LogoCarousel } from '@site/src/components/logo-carousel';
-import { StatsSection } from '@site/src/components/stats-section';
 import { AboutSection } from '@site/src/components/about-section';
 import { FeaturesSection } from '@site/src/components/features-section';
 import { PricingSection } from '@site/src/components/pricing-section';
@@ -56,29 +55,13 @@ export default function Home(): ReactNode {
                     {JSON.stringify(structuredData).replace(/</g, '\\u003c')}
                 </script>
             </Head>
-            <main className="landing-wrapper">
-                {/* High Impact Hero with Download Buttons */}
+            <main className="marketing-page">
                 <HeroSection />
-
-                {/* Infinite scroll of supported provider logos (OpenAI, Meta, etc.) */}
                 <LogoCarousel />
-
-                {/* Performance metrics (e.g., "0ms Latency", "10+ Providers") */}
-                <StatsSection />
-
-                {/* The "Why Cosmo Studio" story */}
                 <AboutSection />
-
-                {/* Grid layout distinguishing "Now Available" vs "Roadmap" */}
                 <FeaturesSection />
-
-                {/* Free vs Power User License */}
                 <PricingSection />
-
-                {/* Technical questions (API keys, privacy, etc.) */}
                 <FaqSection />
-
-                {/* Final "Download Now" push */}
                 <CTASection />
             </main>
         </Layout>
