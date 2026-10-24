@@ -121,7 +121,10 @@ export default function PlansPage(): ReactNode {
     };
 
     return (
-        <Layout title="Plans" description="Explore Cosmo Studio Community and Professional plans.">
+        <Layout
+            title="Desktop AI Plans and Features"
+            description="Compare Cosmo Studio Community and Professional plans, included AI features, and download options for macOS, Windows, and Linux."
+        >
             <main className="relative isolate min-h-[calc(100vh-4.5rem)] overflow-hidden px-6 py-20 md:py-28">
                 <div className="from-primary/20 via-background to-background pointer-events-none absolute inset-x-0 top-0 -z-10 mx-auto h-[32rem] max-w-5xl bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))]" />
                 <div className="mx-auto max-w-6xl">
@@ -142,7 +145,7 @@ export default function PlansPage(): ReactNode {
                         {featureGroups.map((plan) => (
                             <article
                                 key={plan.name}
-                                className="relative flex flex-col rounded-3xl border border-border bg-card p-7 shadow-xl shadow-black/[0.03] md:p-10"
+                                className="border-border bg-card relative flex flex-col rounded-3xl border p-7 shadow-xl shadow-black/[0.03] md:p-10"
                             >
                                 <div className="mb-5 flex h-9 items-center">
                                     {plan.featured && (
@@ -212,9 +215,7 @@ export default function PlansPage(): ReactNode {
                                                     {plan.name === 'Community' &&
                                                     feature ===
                                                         `${providerCount} model providers` ? (
-                                                        <Link>
-                                                            {feature}
-                                                        </Link>
+                                                        <Link>{feature}</Link>
                                                     ) : (
                                                         feature
                                                     )}
@@ -230,7 +231,7 @@ export default function PlansPage(): ReactNode {
                                 <div className="mt-9">
                                     <a
                                         href={downloadLinks.mac}
-                                        className="bg-primary !text-white hover:bg-primary/90 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl px-6 font-semibold no-underline transition-colors"
+                                        className="bg-primary hover:bg-primary/90 inline-flex h-12 w-full items-center justify-center gap-2 rounded-xl px-6 font-semibold !text-white no-underline transition-colors"
                                     >
                                         <Download className="h-4 w-4" />
                                         Download Cosmo Studio {plan.featured ? 'Professional' : ''}

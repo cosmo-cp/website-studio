@@ -57,7 +57,7 @@ const config: Config = {
     ],
 
     // Set the production url of your site here
-    url: 'http://cosmocp.com',
+    url: 'https://cosmocp.com',
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: '/',
@@ -112,18 +112,34 @@ const config: Config = {
                 theme: {
                     customCss: './src/css/custom.css',
                 },
+                gtag: {
+                    trackingID: process.env.GA4_MEASUREMENT_ID || 'G-709QB49B8G',
+                },
+                sitemap: {
+                    ignorePatterns: [
+                        '/blog/archive',
+                        '/blog/authors',
+                        '/blog/tags',
+                        '/blog/tags/**',
+                    ],
+                },
             } satisfies Preset.Options,
         ],
     ],
 
     themeConfig: {
-        // Replace with your project's social card
-        image: 'img/docusaurus-social-card.jpg',
+        image: 'img/og-preview.webp',
         metadata: [
             { name: 'twitter:card', content: 'summary_large_image' },
             { name: 'twitter:site', content: socialMedia.x.handle },
             { name: 'twitter:creator', content: socialMedia.x.handle },
             { property: 'og:site_name', content: 'Cosmo Studio' },
+            { property: 'og:image:secure_url', content: 'https://cosmocp.com/img/og-preview.webp' },
+            { property: 'og:image:type', content: 'image/webp' },
+            { property: 'og:image:width', content: '1200' },
+            { property: 'og:image:height', content: '630' },
+            { property: 'og:image:alt', content: 'Cosmo Studio: One workspace. Every model.' },
+            { name: 'twitter:image:alt', content: 'Cosmo Studio: One workspace. Every model.' },
         ],
         colorMode: {
             defaultMode: 'light',
@@ -160,7 +176,7 @@ const config: Config = {
                     items: [
                         {
                             label: 'Features',
-                            to: '/#features',
+                            to: '/docs/features',
                         },
                         {
                             label: 'Download',
@@ -228,7 +244,7 @@ const config: Config = {
                 debug: true,
                 mode: 'auto',
             },
-        ]
+        ],
     ],
 };
 

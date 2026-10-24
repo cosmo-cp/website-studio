@@ -1,0 +1,9 @@
+tutorial:
+    {
+        label: Tutorials,
+        description: Step-by-step guides for setting up AI providers with Cosmo Studio.,
+    }
+openai: { label: OpenAI, description: Guides for connecting OpenAI models to Cosmo Studio. }
+gemini: { label: Gemini, description: Guides for connecting Google Gemini models to Cosmo Studio. }
+api: { label: API keys, description: How to create and protect keys for cloud AI providers. }
+setup: { label: Setup, description: Installation and provider configuration guides. }
