@@ -1759,7 +1759,15 @@ body:has(.marketing-page) .footer-social-link {
         gap: 20px;
     }
     .plan-comparison .included-value span {
-        display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border: 0;
     }
     .marketing-page .plan-comparison thead th {
         font-size: 21px;
