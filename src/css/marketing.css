@@ -95,8 +95,9 @@
 .marketing-page select:focus-visible,
 .marketing-page summary:focus-visible,
 .comparison-scroll:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 5px;
+    outline: 3px solid #26251e;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px #ffffff;
 }
 
 .marketing-page button {
