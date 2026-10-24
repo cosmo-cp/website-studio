@@ -55,8 +55,7 @@ export default function Home(): ReactNode {
                     {JSON.stringify(structuredData).replace(/</g, '\\u003c')}
                 </script>
             </Head>
-            <main className="landing-wrapper">
-                {/* High Impact Hero with Download Buttons */}
+            <main className="marketing-page">
                 <HeroSection />
                 <LogoCarousel />
                 <AboutSection />
