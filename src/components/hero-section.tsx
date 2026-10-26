@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 import { Apple, ChevronDown, Monitor, Terminal } from 'lucide-react';
 
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import {track} from "@vercel/analytics";
+import { track } from '@vercel/analytics';
 const Hero3DCard = lazy(() =>
     import('./hero/hero-chat-mockup').then((module) => ({ default: module.Hero3DCard }))
 );
