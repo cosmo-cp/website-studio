@@ -98,6 +98,9 @@ const config: Config = {
                 docs: {
                     sidebarPath: './sidebars.ts',
                 },
+                pages: {
+                    exclude: ['**/plans.tsx'],
+                },
                 blog: {
                     showReadingTime: true,
                     feedOptions: {
@@ -154,6 +157,12 @@ const config: Config = {
                 srcDark: 'img/logo-dark.svg',
             },
             items: [
+                {
+                    to: '/#features',
+                    label: 'Features',
+                    position: 'left',
+                    activeBaseRegex: '^/$',
+                },
                 {
                     type: 'docSidebar',
                     sidebarId: 'tutorialSidebar',
