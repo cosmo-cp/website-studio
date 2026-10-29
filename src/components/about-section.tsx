@@ -12,8 +12,8 @@ export function AboutSection() {
                     Yours by default.
                 </h2>
                 <p>
-                    Your thinking deserves a home of its own. Cosmo keeps your conversations on your
-                    device and lets you choose exactly how you connect to AI.
+                    Cosmo is an open-source, cross-platform workspace that keeps your conversations
+                    on your device and lets you choose how you connect to AI.
                 </p>
                 <Link to="/docs/getting-started" className="studio-text-link">
                     Set up your workspace <TextArrow />

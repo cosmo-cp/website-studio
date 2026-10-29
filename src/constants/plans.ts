@@ -69,23 +69,23 @@ export const PLAN_PROVIDERS = {
 export const PLAN_PROVIDER_COUNT = PLAN_PROVIDERS.builtIn.length + PLAN_PROVIDERS.community.length;
 
 export const COMMUNITY_FEATURES = [
+    'Local models',
+    'Projects',
+    'RAG',
+    'Guardrails',
     'MCP',
+    'MCP Registry',
     'Tool Call',
     'Agent Client Protocol',
     'Chat',
     'Command',
     'Persona',
-];
-
-export const PROFESSIONAL_FEATURES = [
-    'MCP Registry',
-    'Image Generation',
-    'RAG',
-    'Projects',
-    'Guardrails',
-    'Usage',
+    'Usage insights',
     'Keyboard shortcuts',
-    'Automation',
+    'Workflow automation',
+    'Image Generation',
     'Audio Generation',
     'Video Generation',
 ];
+
+export const PROFESSIONAL_FEATURES = ['Cost Intelligence (planned)'];

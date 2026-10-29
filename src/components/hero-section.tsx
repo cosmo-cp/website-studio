@@ -9,15 +9,15 @@ export function HeroSection() {
             <div className="hero-intro">
                 <Reveal>
                     <h1 id="hero-title">
-                        Every model.
+                        One workspace.
                         <br />
-                        Your workspace.
+                        Multiple models.
                     </h1>
                 </Reveal>
                 <Reveal className="hero-description" delay={0.08}>
                     <p>
-                        Chat with GPT, Claude, and local Ollama models in one native desktop app.
-                        Your keys. Your conversations. Your call.
+                        Work with multiple AI models, compatible agents, and connected tools in one
+                        open-source workspace. Choose how you work with AI, on your terms.
                     </p>
                     <DownloadButton />
                     <Link className="studio-text-link" to="/docs/getting-started">

@@ -67,9 +67,15 @@ export const FEATURES_ROADMAP = [
         status: 'coming',
     },
     {
-        title: 'Workflow',
+        title: 'Workflow Automation',
         description:
             'Build complex automation workflows and multi-step processes with a visual drag-and-drop builder.',
+        status: 'coming',
+    },
+    {
+        title: 'Cost Intelligence',
+        description:
+            'Understand AI spending, get workload-based recommendations, and add safeguards for agent usage.',
         status: 'coming',
     },
     {
@@ -77,12 +83,7 @@ export const FEATURES_ROADMAP = [
         description:
             'Run Python and Javascript code directly in your chat to perform data analysis, math, and more.',
         status: 'coming',
-    },
-    {
-        title: 'Mobile App',
-        description: 'Bring the full power of Cosmo Studio to iOS and Android.',
-        status: 'coming',
-    },
+    }
 ];
 
 export const FAQS = [

@@ -4,7 +4,11 @@ sidebar_position: 4
 
 # Features
 
-Cosmo Studio focuses on speed, clarity, and control. Below is a practical overview of the core capabilities you can expect today.
+Cosmo is an open-source, cross-platform AI workspace for models, agents, and connected tools. This page separates features available today from capabilities still in development.
+
+## AI Workspace
+
+Bring models from different providers into one workspace, run compatible coding agents through the Agent Client Protocol (ACP), and connect external tools through the Model Context Protocol (MCP). Cosmo is local-first: conversations are stored on your device, while prompts for cloud models are sent to the provider you choose.
 
 ## Multi-provider support
 
@@ -108,7 +112,3 @@ Add, edit, and remove providers with simple configuration flows. Keep keys organ
 ## Cross-platform availability 🖥️
 
 Run the same experience on Windows, macOS, and Linux with consistent behavior across all supported platforms.
-
-<!-- ## Multimodal input 🖼️
-
-Support for image-based prompts in chat for vision-capable models. -->

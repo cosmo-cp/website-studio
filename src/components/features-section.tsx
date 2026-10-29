@@ -9,9 +9,12 @@ export function FeaturesSection() {
         <section className="features-section" aria-labelledby="features">
             <Reveal className="section-heading">
                 <Heading as="h2" id="features">
-                    A wider workspace.
+                    Models, agents, and tools. One place.
                 </Heading>
-                <p>A focused place to think, with the tools to take things further.</p>
+                <p>
+                    Bring together the AI models, agents, and tools you use for code, research, and
+                    everyday work.
+                </p>
             </Reveal>
             <div className="feature-board">
                 <Reveal className="feature-tile feature-tools">
@@ -99,7 +102,7 @@ export function FeaturesSection() {
             <Reveal className="roadmap-row">
                 <div>
                     <h3>Next on the horizon.</h3>
-                    <p>In development, not included today.</p>
+                    <p>In development. Not available yet.</p>
                 </div>
                 <ul>
                     {FEATURES_ROADMAP.map((feature) => (

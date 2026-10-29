@@ -4,6 +4,7 @@ import { HeroSection } from '@site/src/components/hero-section';
 import { LogoCarousel } from '@site/src/components/logo-carousel';
 import { AboutSection } from '@site/src/components/about-section';
 import { FeaturesSection } from '@site/src/components/features-section';
+import { CostIntelligenceSection } from '@site/src/components/cost-intelligence-section';
 import { PricingSection } from '@site/src/components/pricing-section';
 import { FaqSection } from '@site/src/components/faq-section';
 import { CTASection } from '@site/src/components/cta-section';
@@ -40,15 +41,16 @@ export default function Home(): ReactNode {
                 url: 'https://cosmocp.com/',
                 applicationCategory: 'ProductivityApplication',
                 operatingSystem: 'macOS, Windows, Linux',
-                description: 'A local-first desktop app for chatting with multiple AI providers.',
+                description:
+                    'An open-source, local-first AI workspace for models, agents, and connected tools, with Cost Intelligence in development for Cosmo Professional.',
                 publisher: { '@id': 'https://cosmocp.com/#organization' },
             },
         ],
     };
     return (
         <Layout
-            title="Local-First AI Chat for GPT, Claude & Ollama"
-            description="Chat with GPT, Claude, and Ollama in Cosmo Studio, a local-first desktop app. Switch providers, bring your own keys, and keep chat history on your device."
+            title="Cosmo — AI Workspace with Cost Intelligence"
+            description="Cosmo is an open-source AI workspace for multiple models, ACP agents, and MCP tools. Cost Intelligence is in development for Cosmo Professional."
         >
             <Head>
                 <script type="application/ld+json">
@@ -60,6 +62,7 @@ export default function Home(): ReactNode {
                 <LogoCarousel />
                 <AboutSection />
                 <FeaturesSection />
+                <CostIntelligenceSection />
                 <PricingSection />
                 <FaqSection />
                 <CTASection />

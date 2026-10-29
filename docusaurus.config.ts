@@ -40,7 +40,7 @@ const socialLinks = [
 
 const config: Config = {
     title: 'Cosmo Studio',
-    tagline: 'Your All-in-One AI Command Center',
+    tagline: 'AI workspace with Cost Intelligence',
     favicon: 'img/favicon.ico',
 
     // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

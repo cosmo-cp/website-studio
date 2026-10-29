@@ -29,8 +29,8 @@ export function PricingSection() {
                         Free<span>forever</span>
                     </p>
                     <p>
-                        Chat, local models, your own keys, MCP tools, ACP agents, commands, and
-                        personas.
+                        Community is the home for Cosmo’s complete AI workspace: models from
+                        multiple providers, local AI, MCP tools, ACP agents, personas, commands and much more
                     </p>
                     <Link
                         to="https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.4"
@@ -42,10 +42,6 @@ export function PricingSection() {
                 <div className="price-summary price-summary--pro">
                     <h3>Professional</h3>
                     <p className="summary-price">Coming soon</p>
-                    <p>
-                        Planned: everything in Community, plus projects, RAG, automation, and more
-                        creative tools.
-                    </p>
                 </div>
             </Reveal>
         </section>

@@ -42,21 +42,25 @@ export default function PlansPage(): ReactNode {
                     <Reveal className="plan-tile">
                         <div className="plan-name">
                             <h2>Community</h2>
-                            <span>For your everyday AI.</span>
+                            <span>The complete AI workspace.</span>
                         </div>
                         <div className="plan-price">
                             Free<span>Forever. Not a trial.</span>
                         </div>
                         <p>
-                            Your essential workspace for cloud models, local AI, tools, and agents.
+                            All workspace capabilities belong in Community, including models,
+                            agents, tools, projects, and automation. Some capabilities are still in
+                            development.
                         </p>
                         <ul className="plan-highlights">
                             {[
                                 `${PLAN_PROVIDER_COUNT} model providers`,
                                 'Bring your own API keys',
                                 'Local models with Ollama & LM Studio',
-                                'MCP tools & ACP agents',
-                                'Chat, commands & personas',
+                                'MCP tools & registry, ACP agents',
+                                'Projects, RAG, guardrails, chat & personas',
+                                'Workflow automation, usage insights & shortcuts',
+                                'Image, audio & video generation',
                             ].map((feature) => (
                                 <li key={feature}>
                                     <Check size={17} aria-hidden="true" />
@@ -70,7 +74,7 @@ export default function PlansPage(): ReactNode {
                     <Reveal className="plan-tile plan-tile--pro" delay={0.08}>
                         <div className="plan-name">
                             <h2>Professional</h2>
-                            <span>For a more connected workflow.</span>
+                            <span>For clearer AI costs.</span>
                         </div>
                         <div className="plan-price">
                             Free<span>Introductory offer</span>
@@ -100,15 +104,15 @@ export default function PlansPage(): ReactNode {
                             </div>
                         </div>
                         <p>
-                            Everything in Community, with more ways to create, organise, and
-                            automate.
+                            Everything in Community, with Cost Intelligence in development as its
+                            defining addition.
                         </p>
                         <ul className="plan-highlights">
                             {[
-                                'Projects, RAG & guardrails',
-                                'MCP Registry & automation',
-                                'Image, audio & video generation',
-                                'Usage insights & keyboard shortcuts',
+                                'Cost visibility across models, agents & tasks',
+                                'Cost-effective model and agent recommendations',
+                                'Spend optimization & agent loop safeguards',
+                                'Switch models or agents with workflow continuity',
                             ].map((feature) => (
                                 <li key={feature}>
                                     <Check size={17} aria-hidden="true" />
@@ -121,9 +125,10 @@ export default function PlansPage(): ReactNode {
                     </Reveal>
                     <Reveal className="plan-fine-print">
                         <p>
-                            <strong>A note on model costs.</strong> Cosmo Studio plans don’t include
-                            cloud API credits. Your provider bills usage separately. Local models
-                            use your own hardware.
+                            <strong>A note on model costs.</strong> Cosmo plans don’t include cloud
+                            API credits. Providers bill usage separately; Cost Intelligence will
+                            help you understand and manage that usage. Local models use your own
+                            hardware.
                         </p>
                         <Link to="/docs/faq" className="studio-text-link">
                             How API billing works <TextArrow />

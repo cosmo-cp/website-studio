@@ -28,7 +28,11 @@ Yes. Models can give plausible but incorrect facts, citations, or code. Check im
 
 ## Do I need an API key, and who charges for usage?
 
-You usually need your own API key for a cloud provider, and that provider may bill you independently of Cosmo Studio. A chat subscription does not necessarily include API usage. Check the provider's current pricing, limits, and key permissions before using it; do not publish keys or paste them into public posts. Local inference through Ollama or LM Studio does not require a cloud inference API key, though it uses your computer's resources. See our guides to [OpenAI API keys](/blog/how-to-get-openai-api-key) and [Gemini API keys](/blog/how-to-get-gemini-api-key).
+You usually need your own API key for a cloud provider, and that provider may bill you independently of Cosmo. A chat subscription does not necessarily include API usage. Check the provider's current pricing, limits, and key permissions before using it; do not publish keys or paste them into public posts. Local inference through Ollama or LM Studio does not require a cloud inference API key, though it uses your computer's resources. Cost Intelligence is in development for Cosmo Professional; until it is available, check usage and billing with your provider. See our guides to [OpenAI API keys](/blog/how-to-get-openai-api-key) and [Gemini API keys](/blog/how-to-get-gemini-api-key).
+
+## What is Cost Intelligence?
+
+Cost Intelligence is a planned Cosmo Professional capability to help people understand and manage AI spending across models, agents, and tasks. The vision includes cost-effective recommendations, ways to optimize spending and safeguards for expensive or repetitive agent loops.
 
 ## How do I connect my first model in Cosmo Studio?
 
