@@ -30,10 +30,11 @@ export function PricingSection() {
                     </p>
                     <p>
                         Community is the home for Cosmo’s complete AI workspace: models from
-                        multiple providers, local AI, MCP tools, ACP agents, personas, commands and much more
+                        multiple providers, local AI, MCP tools, ACP agents, personas, commands and
+                        much more
                     </p>
                     <Link
-                        to="https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.4"
+                        to="https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.5"
                         className="studio-button studio-button--ink"
                     >
                         Download Community <TextArrow />

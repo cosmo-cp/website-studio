@@ -70,12 +70,12 @@ const config: Config = {
     onBrokenLinks: 'throw',
 
     customFields: {
-        version: '1.1.4',
+        version: '1.1.5',
         downloadLinks: {
-            mac: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.4/Cosmo.Studio-darwin-arm64-1.1.4.zip',
+            mac: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.5/Cosmo.Studio-darwin-arm64-1.1.5.zip',
             windows:
-                'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.4/Cosmo.Studio-1.1.4.Setup.exe',
-            linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.4/cosmostudio_1.1.4_amd64.deb',
+                'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.5/Cosmo.Studio-1.1.5.Setup.exe',
+            linux: 'https://github.com/cosmo-cp/cosmo-studio/releases/download/v1.1.5/cosmostudio_1.1.5_amd64.deb',
         },
         socialMedia: {
             ...socialMedia,
@@ -189,7 +189,7 @@ const config: Config = {
                         },
                         {
                             label: 'Download',
-                            href: 'https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.4',
+                            href: 'https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.5',
                         },
                         {
                             label: 'Changelog',

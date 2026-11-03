@@ -85,7 +85,7 @@ Quotes are useful when the agent name contains spaces. The name must match an ag
 | Test connection fails              | Confirm the command is available to Cosmo, review arguments and authentication, and try a valid workspace. |
 | Agent cannot access project files  | Check the workspace path and local user permissions.                                                       |
 
-ACP agents execute locally with access to the configured workspace and permissions granted by their runtime. Review an agent's source and requirements before installing or running it.
+ACP agents execute locally with access to the configured workspace and permissions granted by their runtime. Isolated subprocess leases are maintained per conversation and automatically cleaned up after five minutes of inactivity. Registry `npx` agents run using a shared on-demand Node runtime verified against pinned checksums. Review an agent's source and requirements before installing or running it.
 
 ## Commands ⌨️
 
@@ -97,6 +97,7 @@ A clean, distraction-free interface with advanced control:
 
 - **Reasoning Transparency**: Visible "thinking" process for reasoning-enabled models.
 - **Model Labels**: Clearly see which model generated each message.
+- **Per-Chat Streaming**: Responses stream per chat session so you can switch conversations without interrupting active responses or losing progress.
 - **Streaming Control**: Stop model responses mid-stream with a single click.
 - **Token Tracking**: Monitor token consumption for every model directly in the chat.
 - **Markdown Support**: Full Markdown rendering, including code blocks, tables, and latex.

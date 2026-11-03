@@ -4,6 +4,15 @@ sidebar_position: 7
 
 # Release notes
 
+## Release 1.1.5
+
+- **Per-Chat Streaming Lifecycle**: Chat streaming now runs on isolated per-chat sessions that persist across navigation. Switch between conversations or browse pages without interrupting active model responses or ACP agent sessions.
+- **Models.dev SDK Integration**: Upgraded model discovery to use the official `@opencode-ai/models` SDK with bundled snapshot fallback support, ensuring provider catalogs and capabilities remain accessible offline or during degraded network conditions.
+- **ACP Runtime & Process Isolation**: ACP agent requests now run under isolated subprocess leases per conversation with automatic termination after 5 minutes of inactivity. Registry `npx` agents use an on-demand verified Node runtime.
+- **Full Release Blog Post**: [Read more here](/blog/release-1-1-5)
+
+---
+
 ## Release 1.1.4
 
 - **ACP Agents**: Install supported agents from the ACP registry, test agent connections, and use agents in chat with a selected workspace.

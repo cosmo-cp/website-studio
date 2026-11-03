@@ -34,7 +34,7 @@ export const FEATURES_LIVE = [
         description:
             'Install compatible local agents from the ACP registry and chat with them in a dedicated workspace.',
         icon: 'Bot',
-        badges: ['New in v1.1.4'],
+        badges: ['New'],
     },
     {
         title: 'MCP Servers',
@@ -83,7 +83,7 @@ export const FEATURES_ROADMAP = [
         description:
             'Run Python and Javascript code directly in your chat to perform data analysis, math, and more.',
         status: 'coming',
-    }
+    },
 ];
 
 export const FAQS = [
