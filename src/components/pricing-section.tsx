@@ -34,7 +34,7 @@ export function PricingSection() {
                         much more
                     </p>
                     <Link
-                        to="https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.5"
+                        to="https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.6"
                         className="studio-button studio-button--ink"
                     >
                         Download Community <TextArrow />

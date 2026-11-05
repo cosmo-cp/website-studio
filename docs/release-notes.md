@@ -4,6 +4,13 @@ sidebar_position: 7
 
 # Release notes
 
+## Release 1.1.6
+
+- **More model providers**: Connect Together AI, Fireworks AI, and Baseten to use their models in Cosmo Studio.
+- **Full Release Blog Post**: [Read more here](/blog/release-1-1-6)
+
+---
+
 ## Release 1.1.5
 
 - **Per-Chat Streaming Lifecycle**: Chat streaming now runs on isolated per-chat sessions that persist across navigation. Switch between conversations or browse pages without interrupting active model responses or ACP agent sessions.

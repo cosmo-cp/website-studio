@@ -15,7 +15,7 @@ Bring models from different providers into one workspace, run compatible coding 
 Connect multiple AI providers and switch between them without changing tools. Cosmo Studio supports a vast array of models:
 
 - **Major Providers**: OpenAI, Anthropic, Google Gemini.
-- **High Performance**: Groq, xAI (Grok).
+- **High Performance**: Groq, xAI (Grok), Together AI, Fireworks AI, Baseten.
 - **Open Source & Local**: Ollama, LMStudio, HuggingFace, Mistral.
 - **Specialized Search & Reasoning**: Perplexity, DeepSeek, Moonshot, Cohere.
 
