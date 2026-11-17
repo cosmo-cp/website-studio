@@ -1,10 +1,10 @@
 ---
-title: LLM and Cosmo Studio FAQ
+title: FAQ
 description: Clear answers about large language models, API keys, privacy, local models, and using Cosmo Studio.
 sidebar_position: 6
 ---
 
-# LLM and Cosmo Studio FAQ
+# FAQ
 
 ## What is a large language model (LLM)?
 

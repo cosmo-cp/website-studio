@@ -189,7 +189,7 @@ const config: Config = {
                         },
                         {
                             label: 'Download',
-                            href: 'https://github.com/cosmo-cp/cosmo-studio/releases/tag/v1.1.6',
+                            to: '/download',
                         },
                         {
                             label: 'Changelog',

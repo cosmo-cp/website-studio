@@ -13,7 +13,7 @@ Cosmo Studio is available for Windows, macOS, and Linux. Choose the installer th
 
 ## Install on Windows
 
-1. [Download](https://cosmocp.com/) the Windows installer.
+1. [Download](/download) the Windows installer.
 2. Run the installer and follow the setup wizard.
 3. If you get a popup saying Windows Defender SmartScreen prevents this app from running, click "More info" and then "Run anyway".
 4. Cosmo Studio will be launched automatically.
@@ -21,13 +21,13 @@ Cosmo Studio is available for Windows, macOS, and Linux. Choose the installer th
 
 ## Install on macOS
 
-1. [Download](https://cosmocp.com/) the macOS build.
+1. [Download](/download) the macOS build.
 2. Extract the downloaded zip and drag Cosmo Studio into **Applications**.
 3. Launch Cosmo Studio from Launchpad or Finder.
 
 ## Install on Linux
 
-1. [Download](https://cosmocp.com/) the Linux package for your distribution.
+1. [Download](/download) the Linux package for your distribution.
 2. Install the package using your system package manager.
 3. Launch Cosmo Studio from the app menu.
 

@@ -1,39 +1,27 @@
 ---
-title: AI Workspace Documentation
-sidebar_label: Home
-description: Set up Cosmo, the open-source AI workspace for multiple models, ACP agents, MCP tools, and local-first work. Cost Intelligence is in development for Cosmo Professional.
+title: Cosmo Studio Help Center
+sidebar_label: Home 
+description: Find setup guides, privacy information, and troubleshooting for Cosmo Studio.
 sidebar_position: 1
 ---
 
-# Cosmo
+# How can we help?
 
-**One workspace. Multiple AI models and agents. Complete control over how you work with AI.**
+Find the information you need to set up Cosmo Studio and work with models, agents, and tools.
 
-Cosmo is an open-source, cross-platform AI workspace for writing code, conducting research, automating tasks, and working with AI agents. Bring models from different providers, compatible agents, and connected tools into one place without locking your workflow to a single AI ecosystem.
+## Get started
 
-## AI Workspace
+- [Download Cosmo Studio](/download) for macOS, Windows, or Linux.
+- Follow the [installation guide](./installation.md) and [connect your first provider](./getting-started.md).
+- Explore [features and agent setup](./features.md), including ACP agents and MCP tools.
 
-- **Multi-model AI:** Access models from different providers and choose the right one for the task.
-- **AI agents:** Run compatible coding agents through the Agent Client Protocol (ACP).
-- **Tool integration:** Connect external tools and services through the Model Context Protocol (MCP).
-- **Workflow automation:** Build and manage AI-powered workflows; workflow tools are in development.
-- **Local-first experience:** Keep control of your workspace and data with an open-source app for Windows, macOS, and Linux.
+## Find answers
 
-## Cost Intelligence — Coming to Cosmo Professional
+- Use the [FAQ](./faq.md) for model, API key, and local versus cloud questions.
+- Read [Privacy and data](./privacy-and-data.md) to understand where information goes.
+- Check [Troubleshooting](./troubleshooting.md) for connection, saving, and performance issues.
+- See [Release notes](./release-notes.md) for changes by version.
 
-Cosmo is developing Cost Intelligence to help you understand, manage, and optimize the cost of working with AI. Planned capabilities include spending visibility across models, agents, and tasks; cost-effective recommendations for different workloads; ways to reduce unnecessary spending; safeguards for expensive or repetitive agent loops; and smoother switching between models and agents while keeping work moving.
+## Contact and feedback
 
-Cost Intelligence is in development and is not available in the current release. See the [Cost Intelligence overview](./features.md#cost-intelligence-coming-to-cosmo-professional) for more about the vision.
-
-## Our Vision
-
-The future of AI work is choosing the right model or agent for each task while understanding the resources it takes. Cosmo is building a workspace where AI productivity and Cost Intelligence work together, helping people accomplish more and make smarter decisions about AI usage.
-
-## What’s next
-
-- Follow **[Getting started](./getting-started.md)** for setup details.
-- Review **[Installation](./installation.md)** for setup guidance.
-- Explore **[Features](./features.md)** to see what Cosmo Studio can do.
-- Find answers in the **[LLM and Cosmo Studio FAQ](./faq.md)** about models, API keys, costs, and privacy.
-- Follow our **[OpenAI API key](/blog/how-to-get-openai-api-key)** or **[Gemini API key](/blog/how-to-get-gemini-api-key)** walkthroughs to connect a cloud provider.
-- Check **[Troubleshooting](./troubleshooting.md)** if you run into issues.
+Search [GitHub issues](https://github.com/cosmo-cp/cosmo-studio/issues) for known problems or report a bug. Issues are public: remove credentials, private conversations, and sensitive paths from anything you share. You can also contact [support@cosmocp.com](mailto:support@cosmocp.com).
